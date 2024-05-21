@@ -82,7 +82,7 @@ go
 INSERT INTO Dang_ki_xe (Ngay_dang_ki, bien_so, loai_xe, MaNguoiThue)
 VALUES ('2023-12-31', 'ABC-123', N'xe máy', 'NT001')
 go
-EXEC sp_helpdb;
+
 
 create proc xemXe
 as
@@ -90,8 +90,7 @@ begin
 	select Dang_ki_xe.loai_xe from Dang_ki_xe join Nguoi_thue on Dang_ki_xe.MaNguoiThue = Nguoi_thue.MaNguoiThue join Phong_thue_so_huu on Nguoi_thue.MaNguoiThue = Phong_thue_so_huu.TaiKhoan
 end
 
-drop proc xemXe
-exec xemXe
+
 go
 
 CREATE TABLE Phong_cho_thue
@@ -181,7 +180,8 @@ go
 CREATE TABLE Hoa_don
 (
   MaHoaDon VARCHAR(50) NOT NULL,
-  NgayLapHoaDon DATE NOT NULL,
+  TuNgay DATE NOT NULL,
+  DenNgay DATE NOT NULL,
   MaPhong VARCHAR(50) NOT NULL,
   MaBangPhi VARCHAR(50) NOT NULL,
   TongTien float NOT NULL check(TongTien >0),
@@ -191,9 +191,9 @@ CREATE TABLE Hoa_don
   FOREIGN KEY (MaBangPhi) REFERENCES Bang_phi(MaBangPhi)
 )
 go
-INSERT INTO Hoa_don (MaHoaDon, NgayLapHoaDon, MaPhong, MaBangPhi, TongTien, TrangThai) 
+INSERT INTO Hoa_don (MaHoaDon, TuNgay, DenNgay, MaPhong, MaBangPhi, TongTien, TrangThai) 
 VALUES 
-('HD001', '2024-05-20', 'P002', 'BP001', 220000000, N'Chưa thanh toán')
+('HD001', '2024-05-21', '2024-05-30', 'P002', 'BP001', 220000000, N'Chưa thanh toán')
 go
 CREATE TABLE Dien
 (
@@ -527,12 +527,12 @@ end
 go
 
 create proc insertToHoaDon
-@Ngay_lap_hoa_don date, @maPhong varchar(10), @Ma_bang_phi varchar(10), @tongTien float
+@Ngay_lap_hoa_don date, @DenNgay date, @maPhong varchar(10), @Ma_bang_phi varchar(10), @tongTien float
 as 
 begin
 	declare @ma varchar(10)
 	set @ma = dbo.insertTableHoaDon()
-	insert into Hoa_don values(@ma, @Ngay_lap_hoa_don, @maPhong, @Ma_bang_phi, @tongTien, 'Chưa thanh toán')
+	insert into Hoa_don values(@ma, @Ngay_lap_hoa_don, @DenNgay, @maPhong, @Ma_bang_phi, @tongTien, 'Chưa thanh toán')
 end
 
 select * from Nguoi_thue

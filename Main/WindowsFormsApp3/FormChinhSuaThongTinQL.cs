@@ -57,7 +57,7 @@ namespace WindowsFormsApp3
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (isEmail(tbEmail.Text))
+            if (isEmail(tbEmail.Text.Trim()) == false)
             {
                 MessageBox.Show("Email không hợp lệ");
                 return;
@@ -65,6 +65,11 @@ namespace WindowsFormsApp3
             if (tbSdt.Text.Length != 10)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ");
+                return;
+            }
+            if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
+            {
+                MessageBox.Show("Vui lòng không để trống thông tin");
                 return;
             }
             string ten = tbTen.Text.Trim();

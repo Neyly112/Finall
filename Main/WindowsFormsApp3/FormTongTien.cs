@@ -64,9 +64,9 @@ namespace WindowsFormsApp3
             lbNgayLap.Text = ngayLap.ToString();
             lbTienThuePhong.Text = giaPhong.ToString();
             lbTienXe.Text = tongTienXe.ToString();
-            lbXeDap.Text = "Xe đạp: " + xeDap.ToString();
-            lbXeMay.Text = "Xe máy: " + xeMay.ToString();
-            lbXeDuoi15Tan.Text = "Xe dưới 1,5 tấn: " + xeDuoi15Tan.ToString();
+            lbXeDap.Text = "Xe đạp: " + xeDap.ToString() + "chiếc";
+            lbXeMay.Text = "Xe máy: " + xeMay.ToString() + "chiếc";
+            lbXeDuoi15Tan.Text = "Xe dưới 1,5 tấn: " + xeDuoi15Tan.ToString() + "chiếc";
         }
 
         private void button1_Click(object sender, EventArgs e)

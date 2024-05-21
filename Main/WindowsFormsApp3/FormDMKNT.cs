@@ -62,7 +62,7 @@ namespace WindowsFormsApp3
         {
             if ((tbMkCu.Text == "") || (tbMkMoi.Text == ""))
             {
-                MessageBox.Show("Vui lòng nhập mật khẩu");
+                MessageBox.Show("Vui lòng nhập thông tin");
                 return;
             }
             string matKhauCu = tbMkCu.Text.Trim();

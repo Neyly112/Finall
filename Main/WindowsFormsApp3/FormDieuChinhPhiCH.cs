@@ -35,11 +35,11 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            if ((Convert.ToInt32(tbPhiSinhHoat.Text) < 0) || (Convert.ToInt32(tbTienDien.Text) < 0)
-                || (Convert.ToInt32(tbTienNuoc.Text) < 0) || (Convert.ToInt32(tbTienXe15Tan.Text) < 0)
-                || (Convert.ToInt32(tbTienXeDap.Text) < 0) || (Convert.ToInt32(tbTienXeMay.Text) < 0))
+            if ((Convert.ToInt32(tbPhiSinhHoat.Text) <= 0) || (Convert.ToInt32(tbTienDien.Text) <= 0)
+                || (Convert.ToInt32(tbTienNuoc.Text) <= 0) || (Convert.ToInt32(tbTienXe15Tan.Text) <= 0)
+                || (Convert.ToInt32(tbTienXeDap.Text) <= 0) || (Convert.ToInt32(tbTienXeMay.Text) <= 0))
             {
-                MessageBox.Show("Số tiền không được âm");
+                MessageBox.Show("Các số liệu không được âm");
                 return;
             }
             if (sql == null)

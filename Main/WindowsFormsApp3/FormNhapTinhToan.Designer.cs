@@ -49,9 +49,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(238, 395);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(200, 37);
+            this.label7.Size = new System.Drawing.Size(142, 37);
             this.label7.TabIndex = 35;
-            this.label7.Text = "Ngày kết thúc";
+            this.label7.Text = "Đến ngày";
             // 
             // label6
             // 
@@ -59,13 +59,13 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(238, 339);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 37);
+            this.label6.Size = new System.Drawing.Size(127, 37);
             this.label6.TabIndex = 34;
-            this.label6.Text = "Ngày bắt đầu";
+            this.label6.Text = "Từ ngày";
             // 
             // ngayKetThuc
             // 
-            this.ngayKetThuc.CustomFormat = "yyy-MM-dd";
+            this.ngayKetThuc.CustomFormat = "yyyy-MM-dd";
             this.ngayKetThuc.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ngayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngayKetThuc.Location = new System.Drawing.Point(461, 395);
@@ -78,7 +78,7 @@
             // 
             // ngayBatDau
             // 
-            this.ngayBatDau.CustomFormat = "yyy-MM-dd";
+            this.ngayBatDau.CustomFormat = "yyyy-MM-dd";
             this.ngayBatDau.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ngayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngayBatDau.Location = new System.Drawing.Point(461, 344);

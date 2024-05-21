@@ -39,7 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbSNG = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbTenPhong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePickerNL = new System.Windows.Forms.DateTimePicker();
@@ -48,6 +47,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelLHD
@@ -158,15 +158,6 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Số người ở";
             // 
-            // tbTenPhong
-            // 
-            this.tbTenPhong.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.tbTenPhong.Location = new System.Drawing.Point(400, 462);
-            this.tbTenPhong.Multiline = true;
-            this.tbTenPhong.Name = "tbTenPhong";
-            this.tbTenPhong.Size = new System.Drawing.Size(612, 38);
-            this.tbTenPhong.TabIndex = 14;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -254,19 +245,28 @@
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(400, 462);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(612, 39);
+            this.comboBox1.TabIndex = 22;
+            // 
             // FormNewHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1258, 777);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePickerNKT);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePickerNL);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tbTenPhong);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbSNG);
             this.Controls.Add(this.label5);
@@ -303,7 +303,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbSNG;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbTenPhong;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePickerNL;
@@ -312,5 +311,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

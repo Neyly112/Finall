@@ -43,7 +43,30 @@ namespace WindowsFormsApp3
 
         private void FormNewHD_Load(object sender, EventArgs e)
         {
+            dateTimePickerNKT.Value = DateTime.Now;
+            dateTimePickerNL.Value = DateTime.Now;
+            List<string> list = new List<string>();
+            if (sql == null)
+            {
+                sql = new SqlConnection(strSql);
+            }
+            if (sql.State == ConnectionState.Closed)
+            {
+                sql.Open();
+            }
+            SqlCommand sqlCm = new SqlCommand();
+            sqlCm.CommandType = CommandType.Text;
+            sqlCm.CommandText = "select MaPhong from Phong_cho_thue where MaPhong not in (select MaPhong from Hop_dong)";
+            sqlCm.Connection = sql;
+            SqlDataReader reader = sqlCm.ExecuteReader();
+            int kq = 0;
+            while (reader.Read())
+            {
+                list.Add(reader.GetString(0));
 
+            }
+            reader.Close();
+            comboBox1.DataSource = list;
         }
         private void getMailCH()
         {
@@ -73,17 +96,43 @@ namespace WindowsFormsApp3
         {
             
             NguoiThue n = new NguoiThue(txTen.Text.Trim(), tbDC.Text.Trim(), tbEmail.Text.Trim(), tbSDT.Text.Trim(),  "1", "1");
+            
+            
             if ((tbDC.Text == "") || (tbEmail.Text == "") || (tbSDT.Text == "") || (tbSNG.Text == "") || (txTen.Text == ""))
             {
-                MessageBox.Show("Không để trống ô");
+                MessageBox.Show("Không để trống thông tin");
                 return;
             }
-            if ((tbSDT.Text.Length < 10) || (tbSDT.Text.Length > 11))
+            if ((tbSDT.Text.Length != 10))
             {
                 MessageBox.Show("Số điện thoại không phù hợp");
                 return;
             }
-            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Text), dateTimePickerNKT.Text.ToString(), tbTenPhong.Text.Trim());
+            if (Convert.ToInt32(tbSNG.Text.Trim()) <= 0)
+            {
+                MessageBox.Show("Sai số người");
+                return;
+            }
+            
+            
+            if (isEmail(tbEmail.Text.Trim()) == false)
+            {
+                MessageBox.Show("Nhap sai email");
+                return;
+            }
+            string tmp = DateTime.Now.ToString("yyyy-MM-dd");
+            if (dateTimePickerNL.Value.ToString("yyyy-MM-dd") != tmp)
+            {
+                MessageBox.Show("Ngày lập phải là hôm nay");
+                return;
+            }
+            if (dateTimePickerNKT.Value.ToString() == dateTimePickerNL.Value.ToString())
+            {
+                MessageBox.Show("Trùng ngày lập và kết thúc");
+                return;
+            }
+            
+            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Text), dateTimePickerNKT.Text.ToString(), comboBox1.Text.Trim());
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -93,33 +142,14 @@ namespace WindowsFormsApp3
                 sql.Open();
             }
             
-            if ((checkPhong(tbTenPhong.Text.Trim()) == false) || (checkPhongDaThue(tbTenPhong.Text.Trim()) == true))
-            {
-                MessageBox.Show("Phòng đã cho thuê hoặc không tồn tại");
-                return;
-            }
-
-            string email = n.getEmail();
-            
-            if (isEmail(email) == false)
-            {
-                MessageBox.Show("Nhap sai email");
-                return;
-            }
-            string phone = n.getSdt().Trim();
-            string name = n.getTen().Trim();
-            string NL = dateTimePickerNL.Value.ToString("yyyy-MM-dd");
-            string NKT = dateTimePickerNKT.Value.ToString("yyyy-MM-dd");
-            int nMember = Convert.ToInt32(tbSNG.Text);
-            string address = n.getDiaChi().Trim();
             funcAddKH(n.getEmail().Trim(), n.getDiaChi().Trim(), n.getSdt().Trim(), n.getTen().Trim());
             funcAddHD(h.getNgayKetThuc().Trim(), Convert.ToInt32(h.getSoNguoi()), h.getNgayLap().Trim(), h.getTenPhong());
             funcInsertPhongThueSH(h.getTenPhong());
             getMailCH();
-            checkPhong(h.getTenPhong());
+           
             MailMessage mail = new MailMessage();
             MailAddress to = new MailAddress(emailCH);
-            MessageBox.Show("Hoàn thành gửi yêu cầu. Trở lại trang chủ?");
+            
             mail.From = new MailAddress("thuanminh1390@gmail.com");
             mail.To.Add(to);
             mail.Subject = "Hợp đồng mới";
@@ -254,6 +284,7 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Chưa xác nhận");
             }
+            sql.Close();
 
         }
 
@@ -275,6 +306,7 @@ namespace WindowsFormsApp3
 
             sqlCm.Connection = sql;
             int k = sqlCm.ExecuteNonQuery();
+            sql.Close();
         }
 
         private void dateTimePickerNL_ValueChanged(object sender, EventArgs e)

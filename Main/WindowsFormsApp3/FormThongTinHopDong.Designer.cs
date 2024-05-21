@@ -122,7 +122,6 @@
             this.tbTenNguoiThue.Location = new System.Drawing.Point(387, 132);
             this.tbTenNguoiThue.Multiline = true;
             this.tbTenNguoiThue.Name = "tbTenNguoiThue";
-            this.tbTenNguoiThue.ReadOnly = true;
             this.tbTenNguoiThue.Size = new System.Drawing.Size(309, 39);
             this.tbTenNguoiThue.TabIndex = 2;
             this.tbTenNguoiThue.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
@@ -147,7 +146,7 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(387, 323);
-            this.dateTimePicker2.MinDate = new System.DateTime(2024, 5, 21, 0, 0, 0, 0);
+            this.dateTimePicker2.MinDate = new System.DateTime(2024, 5, 21, 22, 5, 16, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(309, 34);
             this.dateTimePicker2.TabIndex = 5;
@@ -160,9 +159,9 @@
             this.tbSoNg.Location = new System.Drawing.Point(387, 196);
             this.tbSoNg.Multiline = true;
             this.tbSoNg.Name = "tbSoNg";
-            this.tbSoNg.ReadOnly = true;
             this.tbSoNg.Size = new System.Drawing.Size(309, 39);
             this.tbSoNg.TabIndex = 3;
+            this.tbSoNg.TextChanged += new System.EventHandler(this.tbSoNg_TextChanged);
             // 
             // label2
             // 

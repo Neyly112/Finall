@@ -116,9 +116,9 @@ namespace WindowsFormsApp3
         private void button2_Click(object sender, EventArgs e)
         {
             
-            if (dateTimePicker2.Value == DateTime.MinValue)
+            if (dateTimePicker2.Value.ToString() == dateTimePicker1.Value.ToString())
             {
-                MessageBox.Show("Ngày kết thúc không hợp lệ");
+                MessageBox.Show("Ngày kết thúc phải sau ngày lập");
                 return;
             }
             if (dateTimePicker2 == null)
@@ -126,6 +126,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập thông tin");
                 return;
             }
+
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -232,6 +233,11 @@ namespace WindowsFormsApp3
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.CustomFormat = "yyyy-MM-dd";
             
+        }
+
+        private void tbSoNg_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

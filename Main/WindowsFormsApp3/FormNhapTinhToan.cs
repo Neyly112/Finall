@@ -106,7 +106,7 @@ namespace WindowsFormsApp3
             }
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "select MaPhong from Phong_thue_so_huu";
+            sqlCm.CommandText = "select MaPhong from Phong_cho_thue where TrangThaiPhong = N'Đã thuê'";
             sqlCm.Connection = sql;
             SqlDataReader reader = sqlCm.ExecuteReader();
             int kq = 0;
@@ -199,9 +199,21 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            if ((Convert.ToInt32(tbTienDien.Text) < 0) || (Convert.ToInt32(tbTienNuoc.Text) < 0))
+            if ((Convert.ToInt32(tbTienDien.Text) <= 0) || (Convert.ToInt32(tbTienNuoc.Text) <= 0))
             {
-                MessageBox.Show("Các số liệu không âm");
+                MessageBox.Show("Các số liệu phải lớn hơn 0");
+                return;
+            }
+            string tmp = DateTime.Now.ToString("yyyy-MM-dd");
+            if (ngayBatDau.Value.ToString("yyyy-MM-dd") != tmp)
+            {
+                MessageBox.Show("Ngày lập phải là hôm nay");
+                return;
+            }
+            if (ngayBatDau.Value.ToString("yyyy-MM-dd") == ngayKetThuc.Value.ToString("yyyy-MM-dd"))
+            {
+                MessageBox.Show("Trùng ngày tính");
+                return;
             }
             double so_m3 = Convert.ToDouble(tbTienNuoc.Text.Trim());
             double soKwh = Convert.ToDouble(tbTienDien.Text.Trim());
