@@ -60,13 +60,13 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((tbMkCu.Text == "") || (tbMkMoi.Text == ""))
+            if ((tbMkCu.Texts == "") || (tbMkMoi.Texts == ""))
             {
                 MessageBox.Show("Vui lòng nhập thông tin");
                 return;
             }
-            string matKhauCu = tbMkCu.Text.Trim();
-            string mkMoi = tbMkMoi.Text.Trim();
+            string matKhauCu = tbMkCu.Texts;
+            string mkMoi = tbMkMoi.Texts;
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -101,6 +101,15 @@ namespace WindowsFormsApp3
             this.Hide();
             FormThongTinKH f = new FormThongTinKH(ma);
             f.ShowDialog();
+        }
+
+        private void FormDMKNT_Load(object sender, EventArgs e)
+        {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label8.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
     }
 }

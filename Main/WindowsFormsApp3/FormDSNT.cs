@@ -48,6 +48,9 @@ namespace WindowsFormsApp3
         private void FormDSNT_Load(object sender, EventArgs e)
         {
             showNT();
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void button1_Click(object sender, EventArgs e)

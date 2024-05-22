@@ -30,50 +30,53 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbTienXe15Tan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbTienXeDap = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbTienXeMay = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbPhiSinhHoat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbTienDien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbTienNuoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tbTienXe15Tan = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienXeDap = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienXeMay = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbPhiSinhHoat = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienDien = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienNuoc = new WindowsFormsApp3.UI.UserControlBTN();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button2.Location = new System.Drawing.Point(550, 483);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 55);
             this.button2.TabIndex = 29;
             this.button2.Text = "Xác nhận";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button1.Location = new System.Drawing.Point(312, 483);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 55);
             this.button1.TabIndex = 28;
             this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tbTienXe15Tan
-            // 
-            this.tbTienXe15Tan.Location = new System.Drawing.Point(528, 392);
-            this.tbTienXe15Tan.Multiline = true;
-            this.tbTienXe15Tan.Name = "tbTienXe15Tan";
-            this.tbTienXe15Tan.Size = new System.Drawing.Size(260, 38);
-            this.tbTienXe15Tan.TabIndex = 27;
             // 
             // label7
             // 
@@ -85,14 +88,6 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Tiền xe dưới 1,5 tấn";
             // 
-            // tbTienXeDap
-            // 
-            this.tbTienXeDap.Location = new System.Drawing.Point(528, 328);
-            this.tbTienXeDap.Multiline = true;
-            this.tbTienXeDap.Name = "tbTienXeDap";
-            this.tbTienXeDap.Size = new System.Drawing.Size(260, 38);
-            this.tbTienXeDap.TabIndex = 25;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -102,14 +97,6 @@
             this.label6.Size = new System.Drawing.Size(170, 37);
             this.label6.TabIndex = 24;
             this.label6.Text = "Tiền xe đạp";
-            // 
-            // tbTienXeMay
-            // 
-            this.tbTienXeMay.Location = new System.Drawing.Point(528, 270);
-            this.tbTienXeMay.Multiline = true;
-            this.tbTienXeMay.Name = "tbTienXeMay";
-            this.tbTienXeMay.Size = new System.Drawing.Size(260, 38);
-            this.tbTienXeMay.TabIndex = 23;
             // 
             // label5
             // 
@@ -121,14 +108,6 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Tiền xe máy";
             // 
-            // tbPhiSinhHoat
-            // 
-            this.tbPhiSinhHoat.Location = new System.Drawing.Point(528, 213);
-            this.tbPhiSinhHoat.Multiline = true;
-            this.tbPhiSinhHoat.Name = "tbPhiSinhHoat";
-            this.tbPhiSinhHoat.Size = new System.Drawing.Size(260, 38);
-            this.tbPhiSinhHoat.TabIndex = 21;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -139,14 +118,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Phí sinh hoạt";
             // 
-            // tbTienDien
-            // 
-            this.tbTienDien.Location = new System.Drawing.Point(528, 155);
-            this.tbTienDien.Multiline = true;
-            this.tbTienDien.Name = "tbTienDien";
-            this.tbTienDien.Size = new System.Drawing.Size(260, 38);
-            this.tbTienDien.TabIndex = 19;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -156,14 +127,6 @@
             this.label3.Size = new System.Drawing.Size(140, 37);
             this.label3.TabIndex = 18;
             this.label3.Text = "Tiền điện";
-            // 
-            // tbTienNuoc
-            // 
-            this.tbTienNuoc.Location = new System.Drawing.Point(528, 102);
-            this.tbTienNuoc.Multiline = true;
-            this.tbTienNuoc.Name = "tbTienNuoc";
-            this.tbTienNuoc.Size = new System.Drawing.Size(260, 38);
-            this.tbTienNuoc.TabIndex = 17;
             // 
             // label2
             // 
@@ -185,31 +148,171 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Tiền nước";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Gold;
+            this.label8.Location = new System.Drawing.Point(12, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 46);
+            this.label8.TabIndex = 93;
+            this.label8.Text = "Amana";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox2.Image = global::WindowsFormsApp3.Properties.Resources.logo3;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(136, 92);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 92;
+            this.pictureBox2.TabStop = false;
+            // 
+            // tbTienXe15Tan
+            // 
+            this.tbTienXe15Tan.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienXe15Tan.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienXe15Tan.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienXe15Tan.BorderSize = 5;
+            this.tbTienXe15Tan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienXe15Tan.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienXe15Tan.Location = new System.Drawing.Point(529, 387);
+            this.tbTienXe15Tan.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienXe15Tan.Multiline = false;
+            this.tbTienXe15Tan.Name = "tbTienXe15Tan";
+            this.tbTienXe15Tan.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienXe15Tan.PasswordChar = false;
+            this.tbTienXe15Tan.Size = new System.Drawing.Size(260, 41);
+            this.tbTienXe15Tan.TabIndex = 103;
+            this.tbTienXe15Tan.Texts = "";
+            this.tbTienXe15Tan.UnderlinedStyle = true;
+            // 
+            // tbTienXeDap
+            // 
+            this.tbTienXeDap.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienXeDap.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienXeDap.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienXeDap.BorderSize = 5;
+            this.tbTienXeDap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienXeDap.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienXeDap.Location = new System.Drawing.Point(529, 324);
+            this.tbTienXeDap.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienXeDap.Multiline = false;
+            this.tbTienXeDap.Name = "tbTienXeDap";
+            this.tbTienXeDap.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienXeDap.PasswordChar = false;
+            this.tbTienXeDap.Size = new System.Drawing.Size(260, 41);
+            this.tbTienXeDap.TabIndex = 102;
+            this.tbTienXeDap.Texts = "";
+            this.tbTienXeDap.UnderlinedStyle = true;
+            // 
+            // tbTienXeMay
+            // 
+            this.tbTienXeMay.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienXeMay.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienXeMay.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienXeMay.BorderSize = 5;
+            this.tbTienXeMay.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienXeMay.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienXeMay.Location = new System.Drawing.Point(529, 266);
+            this.tbTienXeMay.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienXeMay.Multiline = false;
+            this.tbTienXeMay.Name = "tbTienXeMay";
+            this.tbTienXeMay.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienXeMay.PasswordChar = false;
+            this.tbTienXeMay.Size = new System.Drawing.Size(260, 41);
+            this.tbTienXeMay.TabIndex = 101;
+            this.tbTienXeMay.Texts = "";
+            this.tbTienXeMay.UnderlinedStyle = true;
+            // 
+            // tbPhiSinhHoat
+            // 
+            this.tbPhiSinhHoat.BackColor = System.Drawing.SystemColors.Window;
+            this.tbPhiSinhHoat.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbPhiSinhHoat.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbPhiSinhHoat.BorderSize = 5;
+            this.tbPhiSinhHoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbPhiSinhHoat.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbPhiSinhHoat.Location = new System.Drawing.Point(529, 209);
+            this.tbPhiSinhHoat.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPhiSinhHoat.Multiline = false;
+            this.tbPhiSinhHoat.Name = "tbPhiSinhHoat";
+            this.tbPhiSinhHoat.Padding = new System.Windows.Forms.Padding(7);
+            this.tbPhiSinhHoat.PasswordChar = false;
+            this.tbPhiSinhHoat.Size = new System.Drawing.Size(260, 41);
+            this.tbPhiSinhHoat.TabIndex = 100;
+            this.tbPhiSinhHoat.Texts = "";
+            this.tbPhiSinhHoat.UnderlinedStyle = true;
+            // 
+            // tbTienDien
+            // 
+            this.tbTienDien.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienDien.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienDien.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienDien.BorderSize = 5;
+            this.tbTienDien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienDien.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienDien.Location = new System.Drawing.Point(529, 151);
+            this.tbTienDien.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienDien.Multiline = false;
+            this.tbTienDien.Name = "tbTienDien";
+            this.tbTienDien.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienDien.PasswordChar = false;
+            this.tbTienDien.Size = new System.Drawing.Size(260, 41);
+            this.tbTienDien.TabIndex = 99;
+            this.tbTienDien.Texts = "";
+            this.tbTienDien.UnderlinedStyle = true;
+            // 
+            // tbTienNuoc
+            // 
+            this.tbTienNuoc.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienNuoc.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienNuoc.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienNuoc.BorderSize = 5;
+            this.tbTienNuoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienNuoc.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienNuoc.Location = new System.Drawing.Point(529, 98);
+            this.tbTienNuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienNuoc.Multiline = false;
+            this.tbTienNuoc.Name = "tbTienNuoc";
+            this.tbTienNuoc.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienNuoc.PasswordChar = false;
+            this.tbTienNuoc.Size = new System.Drawing.Size(260, 41);
+            this.tbTienNuoc.TabIndex = 98;
+            this.tbTienNuoc.Texts = "";
+            this.tbTienNuoc.UnderlinedStyle = true;
+            // 
             // FormDieuChinhPhiCH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(987, 588);
+            this.Controls.Add(this.tbTienXe15Tan);
+            this.Controls.Add(this.tbTienXeDap);
+            this.Controls.Add(this.tbTienXeMay);
+            this.Controls.Add(this.tbPhiSinhHoat);
+            this.Controls.Add(this.tbTienDien);
+            this.Controls.Add(this.tbTienNuoc);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.tbTienXe15Tan);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tbTienXeDap);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbTienXeMay);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbPhiSinhHoat);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbTienDien);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbTienNuoc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormDieuChinhPhiCH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDieuChinhPhiCH";
             this.Load += new System.EventHandler(this.FormDieuChinhPhiCH_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,18 +322,20 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbTienXe15Tan;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbTienXeDap;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbTienXeMay;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbPhiSinhHoat;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbTienDien;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbTienNuoc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private UI.UserControlBTN tbTienXe15Tan;
+        private UI.UserControlBTN tbTienXeDap;
+        private UI.UserControlBTN tbTienXeMay;
+        private UI.UserControlBTN tbPhiSinhHoat;
+        private UI.UserControlBTN tbTienDien;
+        private UI.UserControlBTN tbTienNuoc;
     }
 }

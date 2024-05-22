@@ -31,18 +31,21 @@ namespace WindowsFormsApp3
             this.ma = ma;
             strSql = c.SqlConect();
         }
-        private bool isEmail(string email)
-        {
-            if (string.IsNullOrEmpty(email))
-                return false;
-
-            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
-            Regex regex = new Regex(strRegex);
-            return regex.IsMatch(email);
-        }
+        
 
         private void FormNewHD_Load(object sender, EventArgs e)
         {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            label8.BackColor = System.Drawing.Color.Transparent;
+            label9.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            labelLHD.BackColor = System.Drawing.Color.Transparent;
             dateTimePickerNKT.Value = DateTime.Now;
             dateTimePickerNL.Value = DateTime.Now;
             List<string> list = new List<string>();
@@ -92,34 +95,45 @@ namespace WindowsFormsApp3
             reader.Close();
         }
 
+        private bool isEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+                return false;
+
+            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            Regex regex = new Regex(strRegex);
+            return regex.IsMatch(email);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             
-            NguoiThue n = new NguoiThue(txTen.Text.Trim(), tbDC.Text.Trim(), tbEmail.Text.Trim(), tbSDT.Text.Trim(),  "1", "1");
+            NguoiThue n = new NguoiThue(txTen.Texts.Trim(), tbDC.Texts.Trim(), tbEmail.Texts.Trim(), tbSDT.Texts.Trim(),  "1", "1");
             
             
-            if ((tbDC.Text == "") || (tbEmail.Text == "") || (tbSDT.Text == "") || (tbSNG.Text == "") || (txTen.Text == ""))
+            if ((tbDC.Texts == "") || (tbEmail.Texts == "") || (tbSDT.Texts == "") || (tbSNG.Texts == "") || (txTen.Texts == ""))
             {
                 MessageBox.Show("Không để trống thông tin");
                 return;
             }
-            if ((tbSDT.Text.Length != 10))
+            if ((tbSDT.Texts.Length != 10))
             {
                 MessageBox.Show("Số điện thoại không phù hợp");
                 return;
             }
-            if (Convert.ToInt32(tbSNG.Text.Trim()) <= 0)
+            if (isEmail(tbEmail.Texts) == false)
+            {
+                MessageBox.Show("Nhập sai email");
+                return;
+            }
+            if (Convert.ToInt32(tbSNG.Texts.Trim()) <= 0)
             {
                 MessageBox.Show("Sai số người");
                 return;
             }
             
             
-            if (isEmail(tbEmail.Text.Trim()) == false)
-            {
-                MessageBox.Show("Nhap sai email");
-                return;
-            }
+            
+
             string tmp = DateTime.Now.ToString("yyyy-MM-dd");
             if (dateTimePickerNL.Value.ToString("yyyy-MM-dd") != tmp)
             {
@@ -132,7 +146,7 @@ namespace WindowsFormsApp3
                 return;
             }
             
-            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Text), dateTimePickerNKT.Text.ToString(), comboBox1.Text.Trim());
+            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Texts), dateTimePickerNKT.Text.ToString(), comboBox1.Texts.Trim());
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -146,7 +160,7 @@ namespace WindowsFormsApp3
             funcAddHD(h.getNgayKetThuc().Trim(), Convert.ToInt32(h.getSoNguoi()), h.getNgayLap().Trim(), h.getTenPhong());
             funcInsertPhongThueSH(h.getTenPhong());
             getMailCH();
-           
+            MessageBox.Show("kkk");
             MailMessage mail = new MailMessage();
             MailAddress to = new MailAddress(emailCH);
             

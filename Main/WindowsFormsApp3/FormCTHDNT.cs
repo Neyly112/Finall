@@ -52,6 +52,14 @@ namespace WindowsFormsApp3
             dateTimePicker1.Text = ngayBD;
             dateTimePicker2.Text = ngayKT;
             tbSoNg.Text = soNg;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            tbSoNg.BackColor = System.Drawing.Color.Transparent;
+            tbTenNguoiThue.BackColor = System.Drawing.Color.Transparent;
+            tbTenPhong.BackColor = System.Drawing.Color.Transparent;
+           
         }
 
         private void funcGetTenNguoiThue()

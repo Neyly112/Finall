@@ -54,59 +54,11 @@ namespace WindowsFormsApp3
             Regex regex = new Regex(strRegex);
             return regex.IsMatch(email);
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (isEmail(tbEmail.Text) == false)
-            {
-                MessageBox.Show("Email không hợp lệ");
-                return;
-            }
-            if (tbSdt.Text.Length != 10)
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ");
-                return;
-            }
-            if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
-            {
-                MessageBox.Show("Vui lòng không để trống thông tin");
-                return;
-            }
-            string ten = tbTen.Text.Trim();
-            string Sdt = tbSdt.Text.Trim();
-            string email = tbEmail.Text.Trim();
-            string diaChi = tbDiaChi.Text.Trim();
-            
-            if (sql == null)
-            {
-                sql = new SqlConnection(strSql);
-            }
-            if (sql.State == ConnectionState.Closed)
-            {
-                sql.Open();
-            }
-            SqlCommand sqlCm = new SqlCommand();
-            sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "Update Nguoi_thue set DiaChi=N'" + diaChi + "', SoDienThoai='" + Sdt + "', Email='" + email + "', Ten= N'" + ten + "', MatKhau= N'" + matKhau + "' where MaNguoiThue= '" + ma + "'";
-            sqlCm.Connection = sql;
-            int kq = sqlCm.ExecuteNonQuery();
-            if (kq > 0)
-            {
-                MessageBox.Show("Đã sửa thông tin");
-            }
-            else
-            {
-                MessageBox.Show("Lỗi");
-            }
-            this.Hide();
-            FormThongTinKH f = new FormThongTinKH(ma);
-            f.ShowDialog();
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormThongTinKH f = new FormThongTinKH(ma);
-            f.ShowDialog();
+            
         }
 
         private void tbDiaChi_TextChanged(object sender, EventArgs e)
@@ -156,16 +108,85 @@ namespace WindowsFormsApp3
 
         private void FormChinhThongTinKH_Load(object sender, EventArgs e)
         {
-            tbDiaChi.Text = diaChi;
-            tbEmail.Text = email;
-            tbTen.Text = ten;
-            tbSdt.Text = sDT;
+            tbDiaChi.Texts = diaChi;
+            tbEmail.Texts = email;
+            tbTen.Texts = ten;
+            tbSdt.Texts = sDT;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
             this.Hide();
             FormDMKNT f = new FormDMKNT(ma);
+            f.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (tbSdt.Texts.Length != 10)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ");
+                return;
+            }
+            if (isEmail(tbEmail.Texts) == false)
+            {
+                MessageBox.Show("Email không hợp lệ");
+                return;
+            }
+            
+            if ((tbEmail.Texts == "") || (tbDiaChi.Texts == "") || (tbSdt.Texts == "") || (tbTen.Texts == ""))
+            {
+                MessageBox.Show("Vui lòng không để trống thông tin");
+                return;
+            }
+            string ten = tbTen.Texts;
+            string Sdt = tbSdt.Texts;
+            string email = tbEmail.Texts;
+            string diaChi = tbDiaChi.Texts;
+
+            if (sql == null)
+            {
+                sql = new SqlConnection(strSql);
+            }
+            if (sql.State == ConnectionState.Closed)
+            {
+                sql.Open();
+            }
+            SqlCommand sqlCm = new SqlCommand();
+            sqlCm.CommandType = CommandType.Text;
+            sqlCm.CommandText = "Update Nguoi_thue set DiaChi=N'" + diaChi + "', SoDienThoai='" + Sdt + "', Email='" + email + "', Ten= N'" + ten + "', MatKhau= N'" + matKhau + "' where MaNguoiThue= '" + ma + "'";
+            sqlCm.Connection = sql;
+            int kq = sqlCm.ExecuteNonQuery();
+            if (kq > 0)
+            {
+                MessageBox.Show("Đã sửa thông tin");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi");
+            }
+            this.Hide();
+            FormThongTinKH f = new FormThongTinKH(ma);
+            f.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThongTinKH f = new FormThongTinKH(ma);
             f.ShowDialog();
         }
     }

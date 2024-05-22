@@ -466,6 +466,18 @@
     <Compile Include="trangchu3.Designer.cs">
       <DependentUpon>trangchu3.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ClassComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlBTN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlBTN.Designer.cs">
+      <DependentUpon>UserControlBTN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BieuDoSoLuongNguoiThue.resx">
       <DependentUpon>BieuDoSoLuongNguoiThue.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,6 +640,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trangchu3.resx">
       <DependentUpon>trangchu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControlBTN.resx">
+      <DependentUpon>UserControlBTN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -831,6 +846,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLCH1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\calendarWhite.png" />
+    <None Include="Resources\calendarDark.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

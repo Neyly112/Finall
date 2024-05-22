@@ -30,30 +30,32 @@
         {
             this.labelLHD = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txTen = new System.Windows.Forms.TextBox();
-            this.tbSDT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbDC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbSNG = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePickerNL = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerNKT = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txTen = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbSDT = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbDC = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbEmail = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbSNG = new WindowsFormsApp3.UI.UserControlBTN();
+            this.comboBox1 = new WindowsFormsApp3.UI.ClassComboBox();
+            this.dateTimePickerNL = new WindowsFormsApp3.UI.DatePicker();
+            this.dateTimePickerNKT = new WindowsFormsApp3.UI.DatePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelLHD
             // 
             this.labelLHD.AutoSize = true;
-            this.labelLHD.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.labelLHD.BackColor = System.Drawing.Color.White;
             this.labelLHD.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelLHD.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.labelLHD.Location = new System.Drawing.Point(411, 55);
@@ -72,24 +74,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Tên người thuê";
             // 
-            // txTen
-            // 
-            this.txTen.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txTen.Location = new System.Drawing.Point(400, 135);
-            this.txTen.Multiline = true;
-            this.txTen.Name = "txTen";
-            this.txTen.Size = new System.Drawing.Size(612, 38);
-            this.txTen.TabIndex = 4;
-            // 
-            // tbSDT
-            // 
-            this.tbSDT.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.tbSDT.Location = new System.Drawing.Point(400, 194);
-            this.tbSDT.Multiline = true;
-            this.tbSDT.Name = "tbSDT";
-            this.tbSDT.Size = new System.Drawing.Size(612, 38);
-            this.tbSDT.TabIndex = 6;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -99,15 +83,6 @@
             this.label2.Size = new System.Drawing.Size(188, 37);
             this.label2.TabIndex = 5;
             this.label2.Text = "Số điện thoại";
-            // 
-            // tbDC
-            // 
-            this.tbDC.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.tbDC.Location = new System.Drawing.Point(400, 259);
-            this.tbDC.Multiline = true;
-            this.tbDC.Name = "tbDC";
-            this.tbDC.Size = new System.Drawing.Size(612, 38);
-            this.tbDC.TabIndex = 8;
             // 
             // label3
             // 
@@ -119,16 +94,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Địa chỉ";
             // 
-            // tbEmail
-            // 
-            this.tbEmail.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.tbEmail.Location = new System.Drawing.Point(400, 327);
-            this.tbEmail.Multiline = true;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(612, 38);
-            this.tbEmail.TabIndex = 10;
-            this.tbEmail.TextChanged += new System.EventHandler(this.tbEmail_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -138,15 +103,6 @@
             this.label4.Size = new System.Drawing.Size(95, 37);
             this.label4.TabIndex = 9;
             this.label4.Text = "Email";
-            // 
-            // tbSNG
-            // 
-            this.tbSNG.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.tbSNG.Location = new System.Drawing.Point(400, 398);
-            this.tbSNG.Multiline = true;
-            this.tbSNG.Name = "tbSNG";
-            this.tbSNG.Size = new System.Drawing.Size(612, 38);
-            this.tbSNG.TabIndex = 12;
             // 
             // label5
             // 
@@ -178,32 +134,6 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Ngày lập";
             // 
-            // dateTimePickerNL
-            // 
-            this.dateTimePickerNL.Checked = false;
-            this.dateTimePickerNL.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerNL.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNL.Location = new System.Drawing.Point(400, 535);
-            this.dateTimePickerNL.MinDate = new System.DateTime(2024, 5, 4, 0, 0, 0, 0);
-            this.dateTimePickerNL.Name = "dateTimePickerNL";
-            this.dateTimePickerNL.Size = new System.Drawing.Size(612, 45);
-            this.dateTimePickerNL.TabIndex = 16;
-            this.dateTimePickerNL.Value = new System.DateTime(2024, 5, 25, 23, 59, 59, 0);
-            this.dateTimePickerNL.ValueChanged += new System.EventHandler(this.dateTimePickerNL_ValueChanged);
-            // 
-            // dateTimePickerNKT
-            // 
-            this.dateTimePickerNKT.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerNKT.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNKT.Location = new System.Drawing.Point(400, 609);
-            this.dateTimePickerNKT.MinDate = new System.DateTime(2024, 5, 4, 0, 0, 0, 0);
-            this.dateTimePickerNKT.Name = "dateTimePickerNKT";
-            this.dateTimePickerNKT.Size = new System.Drawing.Size(612, 45);
-            this.dateTimePickerNKT.TabIndex = 18;
-            this.dateTimePickerNKT.ValueChanged += new System.EventHandler(this.dateTimePickerNKT_ValueChanged);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -216,43 +146,204 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button1.Location = new System.Drawing.Point(262, 688);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 57);
             this.button1.TabIndex = 19;
             this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button2.Location = new System.Drawing.Point(590, 688);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(178, 57);
             this.button2.TabIndex = 20;
             this.button2.Text = "Xác nhận";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // menuStrip1
+            // txTen
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1258, 24);
-            this.menuStrip1.TabIndex = 21;
-            this.menuStrip1.Text = "menuStrip1";
+            this.txTen.BackColor = System.Drawing.SystemColors.Window;
+            this.txTen.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.txTen.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txTen.BorderSize = 5;
+            this.txTen.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txTen.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txTen.Location = new System.Drawing.Point(400, 135);
+            this.txTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txTen.Multiline = false;
+            this.txTen.Name = "txTen";
+            this.txTen.Padding = new System.Windows.Forms.Padding(7);
+            this.txTen.PasswordChar = false;
+            this.txTen.Size = new System.Drawing.Size(612, 41);
+            this.txTen.TabIndex = 23;
+            this.txTen.Texts = "";
+            this.txTen.UnderlinedStyle = true;
+            // 
+            // tbSDT
+            // 
+            this.tbSDT.BackColor = System.Drawing.SystemColors.Window;
+            this.tbSDT.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbSDT.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbSDT.BorderSize = 5;
+            this.tbSDT.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbSDT.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbSDT.Location = new System.Drawing.Point(400, 194);
+            this.tbSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSDT.Multiline = false;
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Padding = new System.Windows.Forms.Padding(7);
+            this.tbSDT.PasswordChar = false;
+            this.tbSDT.Size = new System.Drawing.Size(612, 41);
+            this.tbSDT.TabIndex = 24;
+            this.tbSDT.Texts = "";
+            this.tbSDT.UnderlinedStyle = true;
+            // 
+            // tbDC
+            // 
+            this.tbDC.BackColor = System.Drawing.SystemColors.Window;
+            this.tbDC.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbDC.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbDC.BorderSize = 5;
+            this.tbDC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbDC.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbDC.Location = new System.Drawing.Point(400, 259);
+            this.tbDC.Margin = new System.Windows.Forms.Padding(4);
+            this.tbDC.Multiline = false;
+            this.tbDC.Name = "tbDC";
+            this.tbDC.Padding = new System.Windows.Forms.Padding(7);
+            this.tbDC.PasswordChar = false;
+            this.tbDC.Size = new System.Drawing.Size(612, 41);
+            this.tbDC.TabIndex = 25;
+            this.tbDC.Texts = "";
+            this.tbDC.UnderlinedStyle = true;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.tbEmail.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbEmail.BorderSize = 5;
+            this.tbEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbEmail.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbEmail.Location = new System.Drawing.Point(400, 327);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Multiline = false;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Padding = new System.Windows.Forms.Padding(7);
+            this.tbEmail.PasswordChar = false;
+            this.tbEmail.Size = new System.Drawing.Size(612, 41);
+            this.tbEmail.TabIndex = 26;
+            this.tbEmail.Texts = "";
+            this.tbEmail.UnderlinedStyle = true;
+            // 
+            // tbSNG
+            // 
+            this.tbSNG.BackColor = System.Drawing.SystemColors.Window;
+            this.tbSNG.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbSNG.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbSNG.BorderSize = 5;
+            this.tbSNG.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbSNG.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbSNG.Location = new System.Drawing.Point(400, 398);
+            this.tbSNG.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSNG.Multiline = false;
+            this.tbSNG.Name = "tbSNG";
+            this.tbSNG.Padding = new System.Windows.Forms.Padding(7);
+            this.tbSNG.PasswordChar = false;
+            this.tbSNG.Size = new System.Drawing.Size(612, 41);
+            this.tbSNG.TabIndex = 27;
+            this.tbSNG.Texts = "";
+            this.tbSNG.UnderlinedStyle = true;
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(400, 462);
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.comboBox1.BorderSize = 3;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.IconColor = System.Drawing.Color.Navy;
+            this.comboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox1.Location = new System.Drawing.Point(400, 468);
+            this.comboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(612, 39);
-            this.comboBox1.TabIndex = 22;
+            this.comboBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.comboBox1.Size = new System.Drawing.Size(612, 30);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.Texts = "";
+            // 
+            // dateTimePickerNL
+            // 
+            this.dateTimePickerNL.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.dateTimePickerNL.BorderSize = 1;
+            this.dateTimePickerNL.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.dateTimePickerNL.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerNL.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.dateTimePickerNL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNL.Location = new System.Drawing.Point(400, 535);
+            this.dateTimePickerNL.MinDate = new System.DateTime(2024, 5, 22, 0, 0, 0, 0);
+            this.dateTimePickerNL.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePickerNL.Name = "dateTimePickerNL";
+            this.dateTimePickerNL.Size = new System.Drawing.Size(612, 39);
+            this.dateTimePickerNL.SkinColor = System.Drawing.SystemColors.ControlLight;
+            this.dateTimePickerNL.TabIndex = 40;
+            this.dateTimePickerNL.TextColor = System.Drawing.SystemColors.WindowText;
+            // 
+            // dateTimePickerNKT
+            // 
+            this.dateTimePickerNKT.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.dateTimePickerNKT.BorderSize = 1;
+            this.dateTimePickerNKT.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.dateTimePickerNKT.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerNKT.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.dateTimePickerNKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNKT.Location = new System.Drawing.Point(400, 609);
+            this.dateTimePickerNKT.MinDate = new System.DateTime(2024, 5, 22, 0, 0, 0, 0);
+            this.dateTimePickerNKT.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePickerNKT.Name = "dateTimePickerNKT";
+            this.dateTimePickerNKT.Size = new System.Drawing.Size(612, 39);
+            this.dateTimePickerNKT.SkinColor = System.Drawing.SystemColors.ControlLight;
+            this.dateTimePickerNKT.TabIndex = 41;
+            this.dateTimePickerNKT.TextColor = System.Drawing.SystemColors.WindowText;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(13, 95);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 46);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Amana";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox2.Image = global::WindowsFormsApp3.Properties.Resources.logo3;
+            this.pictureBox2.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(136, 92);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabStop = false;
             // 
             // FormNewHD
             // 
@@ -260,31 +351,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1258, 777);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dateTimePickerNKT);
+            this.Controls.Add(this.dateTimePickerNL);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.tbSNG);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbDC);
+            this.Controls.Add(this.tbSDT);
+            this.Controls.Add(this.txTen);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePickerNKT);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePickerNL);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbSNG);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbDC);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbSDT);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txTen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelLHD);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormNewHD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNewHD";
             this.Load += new System.EventHandler(this.FormNewHD_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,23 +386,24 @@
 
         private System.Windows.Forms.Label labelLHD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txTen;
-        private System.Windows.Forms.TextBox tbSDT;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbDC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbSNG;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNL;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNKT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private UI.UserControlBTN txTen;
+        private UI.UserControlBTN tbSDT;
+        private UI.UserControlBTN tbDC;
+        private UI.UserControlBTN tbEmail;
+        private UI.UserControlBTN tbSNG;
+        private UI.ClassComboBox comboBox1;
+        private UI.DatePicker dateTimePickerNL;
+        private UI.DatePicker dateTimePickerNKT;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

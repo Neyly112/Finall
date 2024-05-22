@@ -918,3 +918,4 @@ D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.C
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsF.90B8DF9B.Up2Date
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.UI.UserControlBTN.resources

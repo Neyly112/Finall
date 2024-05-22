@@ -29,12 +29,16 @@ namespace WindowsFormsApp3
             row = dataGridView1.Rows[e.RowIndex];
             string maHD = Convert.ToString(row.Cells["MaHoaDon"].Value);
             string maPhong = Convert.ToString(row.Cells["MaPhong"].Value);
+            this.Hide();
             FormXacNhanHoaDon f = new FormXacNhanHoaDon(ma, maHD, maPhong);
             f.ShowDialog();
         }
 
         private void FormDSHDQL_Load(object sender, EventArgs e)
         {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
             dataGridView1.DataSource = getAllHopDong().Tables[0];
             DataSet getAllHopDong()
             {

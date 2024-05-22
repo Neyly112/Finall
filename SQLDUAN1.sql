@@ -532,7 +532,7 @@ as
 begin
 	declare @ma varchar(10)
 	set @ma = dbo.insertTableHoaDon()
-	insert into Hoa_don values(@ma, @Ngay_lap_hoa_don, @DenNgay, @maPhong, @Ma_bang_phi, @tongTien, 'Chưa thanh toán')
+	insert into Hoa_don values(@ma, @Ngay_lap_hoa_don, @DenNgay, @maPhong, @Ma_bang_phi, @tongTien, N'Chưa thanh toán')
 end
 
 select * from Nguoi_thue
@@ -543,5 +543,5 @@ select * from Chu_ho
 select * from Dang_ki_xe
 select * from Tin_nhan
 select * from Thong_ke
-
+select * from Phong_thue_so_huu
 select SoDienThoai

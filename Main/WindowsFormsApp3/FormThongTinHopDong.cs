@@ -74,6 +74,7 @@ namespace WindowsFormsApp3
                 
             }
             reader.Close();
+            sql.Close();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -97,7 +98,7 @@ namespace WindowsFormsApp3
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
             sqlCm.CommandText = "delete from Hop_dong where MaPhong= '" + tenPhong + "'";
-            funcDeletePhongThue();
+            
             sqlCm.Connection = sql;
             int kq = sqlCm.ExecuteNonQuery();
             if (kq > 0)
@@ -108,6 +109,8 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Hợp đồng không tồn tại");
             }
+            sql.Close();
+            funcDeletePhongThue();
             this.Hide();
             FormDanhSachHopDong f = new FormDanhSachHopDong(ma);
             f.ShowDialog();
@@ -116,7 +119,7 @@ namespace WindowsFormsApp3
         private void button2_Click(object sender, EventArgs e)
         {
             
-            if (dateTimePicker2.Value.ToString() == dateTimePicker1.Value.ToString())
+            if (dateTimePicker2.Value.ToString("yyyy-MM-dd") == dateTimePicker1.Value.ToString("yyyy-MM-dd"))
             {
                 MessageBox.Show("Ngày kết thúc phải sau ngày lập");
                 return;
@@ -126,7 +129,11 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập thông tin");
                 return;
             }
-
+            if (Convert.ToInt32(tbSoNg.Texts) <= 0 )
+            {
+                MessageBox.Show("Số người ở không phù hợp");
+                return;
+            }
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -135,12 +142,13 @@ namespace WindowsFormsApp3
             {
                 sql.Open();
             }
-
+            
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "update Hop_dong set NgayKetThuc = '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "', SoNguoiO='" + tbSoNg.Text.Trim() + "' where MaPhong = '" + tenPhong + "'";
+            sqlCm.CommandText = "update Hop_dong set NgayKetThuc = '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "', SoNguoiO='" + tbSoNg.Texts + "' where MaPhong = '" + tenPhong + "'";
             sqlCm.Connection = sql;
-            funcDoiTenNguoiThue(tenPhong);
+            
+            MessageBox.Show("kkk");
             int kq = sqlCm.ExecuteNonQuery();
             if (kq > 0)
             {
@@ -150,6 +158,8 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("Lỗi");
             }
+            sql.Close();
+            funcDoiTenNguoiThue(tenPhong);
         }
 
 
@@ -166,9 +176,10 @@ namespace WindowsFormsApp3
 
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "update Nguoi_thue set Ten = N'" + tbTenNguoiThue.Text.Trim() + "' where MaNguoiThue = '" + maNguoiThue + "'";
+            sqlCm.CommandText = "update Nguoi_thue set Ten = N'" + tbTenNguoiThue.Texts + "' where MaNguoiThue = '" + maNguoiThue + "'";
             sqlCm.Connection = sql;
             int kq = sqlCm.ExecuteNonQuery();
+            sql.Close();
             
         }
         private void funcDeletePhongThue()
@@ -187,15 +198,24 @@ namespace WindowsFormsApp3
             sqlCm.CommandText = "delete from Phong_thue_so_huu where MaPhong= '" + tenPhong + "'";
             sqlCm.Connection = sql;
             int kq = sqlCm.ExecuteNonQuery();
+            sql.Close();
         }
         private void FormHuyHopDong_Load(object sender, EventArgs e)
         {
             funcGetTenNguoiThue();
-            tbTenNguoiThue.Text = tenNguoiThue;
+            tbTenNguoiThue.Texts = tenNguoiThue;
             tbTenPhong.Text = tenPhong;
             dateTimePicker1.Text = ngayBD;
             dateTimePicker2.Text = ngayKT;
-            tbSoNg.Text = soNg;
+            tbSoNg.Texts = soNg;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            tbTenPhong.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+
         }
 
         

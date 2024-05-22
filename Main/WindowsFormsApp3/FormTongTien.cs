@@ -31,7 +31,8 @@ namespace WindowsFormsApp3
         int xeMay;
         int xeDap;
         int xeDuoi15Tan;
-        public FormTongTien(string ma, string maCanHo, double tongTienNuoc, double tongTienDien, double phiSinhHoat, double tongTien, string maBangPhi, string ngayLap, double so_m3, double soKwh, int xeMay, int xeDap, int xeDuoi15Tan, double tongTienXe)
+        string ngayKT;
+        public FormTongTien(string ma, string maCanHo, double tongTienNuoc, double tongTienDien, double phiSinhHoat, double tongTien, string maBangPhi, string ngayLap, string ngayKT, double so_m3, double soKwh, int xeMay, int xeDap, int xeDuoi15Tan, double tongTienXe)
         {
             InitializeComponent();
             this.ma = ma;
@@ -44,6 +45,7 @@ namespace WindowsFormsApp3
             this.ngayLap = ngayLap;
             this.soKwh = soKwh;
             this.so_m3 = so_m3;
+            this.ngayKT = ngayKT;
             giaPhong = 0;
             this.tongTienXe = tongTienXe;
             this.xeMay = xeMay;
@@ -64,9 +66,24 @@ namespace WindowsFormsApp3
             lbNgayLap.Text = ngayLap.ToString();
             lbTienThuePhong.Text = giaPhong.ToString();
             lbTienXe.Text = tongTienXe.ToString();
-            lbXeDap.Text = "Xe đạp: " + xeDap.ToString() + "chiếc";
-            lbXeMay.Text = "Xe máy: " + xeMay.ToString() + "chiếc";
-            lbXeDuoi15Tan.Text = "Xe dưới 1,5 tấn: " + xeDuoi15Tan.ToString() + "chiếc";
+            label3.Text = ngayKT.ToString();
+            lbXeDap.Text = "Xe đạp: " + xeDap.ToString() + " chiếc";
+            lbXeMay.Text = "Xe máy: " + xeMay.ToString() + " chiếc";
+            lbXeDuoi15Tan.Text = "Xe dưới 1,5 tấn: " + xeDuoi15Tan.ToString() + " chiếc";
+            lbMaCanHo.BackColor = System.Drawing.Color.Transparent;
+            lbNgayLap.BackColor = System.Drawing.Color.Transparent;
+            lbPhiSinhHoat.BackColor = System.Drawing.Color.Transparent;
+            lbTienThuePhong.BackColor = System.Drawing.Color.Transparent;
+            lbTienXe.BackColor = System.Drawing.Color.Transparent;
+            lbTongTien.BackColor = System.Drawing.Color.Transparent;
+            lbTongTienDien.BackColor = System.Drawing.Color.Transparent;
+            lbTongTienNuoc.BackColor = System.Drawing.Color.Transparent;
+            lbXeDap.BackColor = System.Drawing.Color.Transparent;
+            lbXeDuoi15Tan.BackColor= System.Drawing.Color.Transparent;
+            lbXeMay.BackColor= System.Drawing.Color.Transparent;
+            label12.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,7 +113,7 @@ namespace WindowsFormsApp3
             }
             reader.Close();
         }
-        private void funcAddHoaDon(double tongTien, string maBangPhi, string maPhong, string ngayLap)
+        private void funcAddHoaDon(double tongTien, string maBangPhi, string maPhong, string ngayLap, string ngayKT)
         {
             if (sql == null)
             {
@@ -108,7 +125,7 @@ namespace WindowsFormsApp3
             }
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "exec insertToHoaDon '" + ngayLap + "', '" + maPhong + "', '" + maBangPhi + "', '" + tongTien + "'";
+            sqlCm.CommandText = "exec insertToHoaDon '" + ngayLap + "', '" + ngayKT + "', '" + maPhong + "', '" + maBangPhi + "', '" + tongTien + "'";
             sqlCm.Connection = sql;
             int kq = sqlCm.ExecuteNonQuery();
             if (kq > 0)
@@ -178,7 +195,7 @@ namespace WindowsFormsApp3
         private void button2_Click_1(object sender, EventArgs e)
         {
             
-            funcAddHoaDon(tongTien, maBangPhi, maCanHo, ngayLap);
+            funcAddHoaDon(tongTien, maBangPhi, maCanHo, ngayLap, ngayKT);
             funcAddDien(soKwh, tongTienDien);
             funcAddNuoc(so_m3, tongTienNuoc);
             funcAddTienXe(tongTienXe);

@@ -44,13 +44,24 @@ namespace WindowsFormsApp3
         private void FormXacNhanHD_Load(object sender, EventArgs e)
         {
             getMailQL();
-            MessageBox.Show(emailQL);
+            
             funcGetTenNguoiThue();
             tbTenNguoiThue.Text = tenNguoiThue;
             tbTenPhong.Text = tenPhong;
             dateTimePicker1.Text = ngayBD;
             dateTimePicker2.Text = ngayKT;
             tbSoNg.Text = soNg;
+            lbTenPhong.BackColor = System.Drawing.Color.Transparent;
+            tbTenPhong.BackColor = System.Drawing.Color.Transparent;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            tbTenNguoiThue.BackColor = System.Drawing.Color.Transparent;
+            tbSoNg.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            
         }
 
         private void funcGetTenNguoiThue()
@@ -76,6 +87,7 @@ namespace WindowsFormsApp3
 
             }
             reader.Close();
+            sql.Close();
         }
         private void getMailQL()
         {
@@ -100,7 +112,7 @@ namespace WindowsFormsApp3
 
             }
             reader.Close();
-            
+            sql.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -200,6 +212,11 @@ namespace WindowsFormsApp3
             this.Hide();
             FormDSHDCH f = new FormDSHDCH(ma);
             f.ShowDialog();
+        }
+
+        private void tbTenNguoiThue_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

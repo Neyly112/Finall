@@ -61,6 +61,19 @@ namespace WindowsFormsApp3
                 lbSdt.Text = sDT;
             }
             reader.Close();
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            lbDiaChi.BackColor = System.Drawing.Color.Transparent;
+            lbEmail.BackColor = System.Drawing.Color.Transparent;
+            lbMatKhau.BackColor = System.Drawing.Color.Transparent;
+            lbSdt.BackColor = System.Drawing.Color.Transparent;
+            lbTen.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void button1_Click(object sender, EventArgs e)

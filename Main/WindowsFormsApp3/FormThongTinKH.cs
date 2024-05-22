@@ -32,9 +32,10 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormChinhThongTinKH f = new FormChinhThongTinKH(ma, ten, diaChi, sDT, email, matKhau);
             f.ShowDialog();
-            this.Hide();
+            
         }
 
         private void FormThongTinKH_Load(object sender, EventArgs e)
@@ -59,12 +60,28 @@ namespace WindowsFormsApp3
                 sDT = reader.GetString(3);
                 email = reader.GetString(2);
                 ten = reader.GetString(0);
+                matKhau = reader.GetString(4);
                 lbTen.Text = ten;
                 lbDiaChi.Text = diaChi;
                 lbEmail.Text = email;
+                string mk = new string('*', matKhau.Length);
+                lbMatKhau.Text = mk;
                 lbSdt.Text = sDT;
             }
             reader.Close();
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            lbDiaChi.BackColor = System.Drawing.Color.Transparent;
+            lbEmail.BackColor = System.Drawing.Color.Transparent;
+            lbMatKhau.BackColor = System.Drawing.Color.Transparent;
+            lbSdt.BackColor = System.Drawing.Color.Transparent;
+            lbTen.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

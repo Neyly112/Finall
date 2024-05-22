@@ -25,7 +25,9 @@ namespace WindowsFormsApp3
 
         private void FormDanhSachHopDong_Load(object sender, EventArgs e)
         {
-
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
             dataGridView1.DataSource = getAllHopDong().Tables[0];
             DataSet getAllHopDong()
             {
@@ -62,6 +64,7 @@ namespace WindowsFormsApp3
             string ngayKT = Convert.ToString(row.Cells["NgayKetThuc"].Value);
             string soNg = Convert.ToString(row.Cells["SoNguoiO"].Value);
             string maNguoiThue = Convert.ToString(row.Cells["MaNguoiThue"].Value);
+            this.Hide();
             FormThongTinHopDong f = new FormThongTinHopDong(ma, maPhong, soNg, ngayBD, ngayKT, maNguoiThue);
             f.ShowDialog();
             

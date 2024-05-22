@@ -59,5 +59,12 @@ namespace WindowsFormsApp3
             trangchu3 t = new trangchu3("");
             t.ShowDialog();
         }
+
+        private void FormDanhSachHoaChuHo_Load(object sender, EventArgs e)
+        {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+        }
     }
 }

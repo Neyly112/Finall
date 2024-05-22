@@ -79,7 +79,15 @@ namespace WindowsFormsApp3
         private void FormNhapTinhToan_Load(object sender, EventArgs e)
         {
             getXe();
-
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+           
             for (int i = 0; i < countXe; i++)
             {
                 if (xe[i] == "xe máy")
@@ -106,7 +114,7 @@ namespace WindowsFormsApp3
             }
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "select MaPhong from Phong_cho_thue where TrangThaiPhong = N'Đã thuê'";
+            sqlCm.CommandText = "select MaPhong from Phong_cho_thue where TrangThaiPhong = N'Đã cho thuê'";
             sqlCm.Connection = sql;
             SqlDataReader reader = sqlCm.ExecuteReader();
             int kq = 0;
@@ -166,7 +174,7 @@ namespace WindowsFormsApp3
                 tongTien = so_m3 * phiNuoc + phiSinhHoatt + soKwh * phiDien + tongTienXe;
                 maBangPhi = reader.GetString(6);
 
-                FormTongTien f = new FormTongTien(ma, maCanHo, tongTienNuoc, tongTienDien, phiSinhHoatt, tongTien, maBangPhi, ngayBatDau.Text.Trim(), so_m3, soKwh, xeMay, xeDap, xe_duoi_1_5_tan, tongTienXe);
+                FormTongTien f = new FormTongTien(ma, maCanHo, tongTienNuoc, tongTienDien, phiSinhHoatt, tongTien, maBangPhi, ngayBatDau.Text.Trim(), ngayKetThuc.Text.Trim(), so_m3, soKwh, xeMay, xeDap, xe_duoi_1_5_tan, tongTienXe);
                 f.ShowDialog();
 
             }
@@ -194,12 +202,12 @@ namespace WindowsFormsApp3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if ((tbTienDien.Text == "") || (tbTienNuoc.Text == ""))
+            if ((tbTienDien.Texts == "") || (tbTienNuoc.Texts == ""))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            if ((Convert.ToInt32(tbTienDien.Text) <= 0) || (Convert.ToInt32(tbTienNuoc.Text) <= 0))
+            if ((Convert.ToInt32(tbTienDien.Texts) <= 0) || (Convert.ToInt32(tbTienNuoc.Texts) <= 0))
             {
                 MessageBox.Show("Các số liệu phải lớn hơn 0");
                 return;
@@ -215,9 +223,9 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Trùng ngày tính");
                 return;
             }
-            double so_m3 = Convert.ToDouble(tbTienNuoc.Text.Trim());
-            double soKwh = Convert.ToDouble(tbTienDien.Text.Trim());
-            string maPhong = comboBox1.Text.Trim();
+            double so_m3 = Convert.ToDouble(tbTienNuoc.Texts);
+            double soKwh = Convert.ToDouble(tbTienDien.Texts);
+            string maPhong = comboBox1.Texts;
             funcTinhTien(so_m3, soKwh, maPhong);
         }
 

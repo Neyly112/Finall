@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="z5246646249554_44fcdd0512fc3a2e1fcd8a452f6421312" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z5246646249554_44fcdd0512fc3a2e1fcd8a452f6421312.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,14 +133,26 @@
   <data name="deco2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deco2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="z5246644335394_3222851d1630d8e2920fe434389f58ae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z5246644335394_3222851d1630d8e2920fe434389f58ae.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cornmanthe3rd-Metronome-Communication-email-blue.512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cornmanthe3rd-Metronome-Communication-email-blue.512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dangnhap3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangnhap3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGINNN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGINNN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendarDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendarDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="revenue (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revenue (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pass1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="deco5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deco5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +169,11 @@
   <data name="logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="deco4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deco4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PikPng.com_logout-png_5199175" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PikPng.com_logout-png_5199175.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chia 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chia 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car-48.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +181,14 @@
   <data name="app_5105051" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\app_5105051.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2f7g7slirsd0uljipghu6fi2ee" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2f7g7slirsd0uljipghu6fi2ee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pass.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pass2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pass2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clipart402083" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipart402083.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendarWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendarWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mat1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,9 +198,6 @@
   </data>
   <data name="cash_5632054" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash_5632054.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="deco3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deco3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="revenue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revenue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,20 +214,20 @@
   <data name="z5246644335394_3222851d1630d8e2920fe434389f58ae1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z5246644335394_3222851d1630d8e2920fe434389f58ae1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="z5246644335394_3222851d1630d8e2920fe434389f58ae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\z5246644335394_3222851d1630d8e2920fe434389f58ae.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pass2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pass2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1600x900-settings-17-xxl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1600x900-settings-17-xxl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pass.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2f7g7slirsd0uljipghu6fi2ee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2f7g7slirsd0uljipghu6fi2ee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DangNhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DangNhap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGINNN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGINNN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PikPng.com_logout-png_5199175" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PikPng.com_logout-png_5199175.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car-24.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +235,8 @@
   <data name="mat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mat2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clipart402083" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clipart402083.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="30145935" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\30145935.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,8 +253,8 @@
   <data name="z5226222769011_7a7d72b79b4a169cfbfc5762e7dd1215" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z5226222769011_7a7d72b79b4a169cfbfc5762e7dd1215.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cornmanthe3rd-Metronome-Communication-email-blue.512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cornmanthe3rd-Metronome-Communication-email-blue.512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DangNhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DangNhap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="deco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deco.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,13 +268,10 @@
   <data name="control_7184146" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control_7184146.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chia 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chia 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="deco3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deco3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pass1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

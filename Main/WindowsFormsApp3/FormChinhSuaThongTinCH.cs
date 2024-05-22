@@ -23,7 +23,7 @@ namespace WindowsFormsApp3
         string sDT;
         string email;
         string matKhau;
-        public FormChinhSuaThongTinCH(string ma, string ten, string diaChi, string email, string sDT, string matKhau)
+        public FormChinhSuaThongTinCH(string ma, string ten, string matKhau, string diaChi, string email, string sDT)
         {
             InitializeComponent();
             this.ma = ma;
@@ -34,36 +34,53 @@ namespace WindowsFormsApp3
             this.ten = ten;
             strSql = c.SqlConect();
         }
-        private bool isEmail(string email)
+     
+        private bool IsValidEmailRegex(string email)
         {
-            if (string.IsNullOrEmpty(email))
-                return false;
+            // Regular expression pattern for a simple email format
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, pattern);
+        }
+        bool IsValidEmail(string email)
+        {
+            var trimmedEmail = email.Trim();
 
-            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
-            Regex regex = new Regex(strRegex);
-            return regex.IsMatch(email);
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (isEmail(tbEmail.Text) == false)
-            {
-                MessageBox.Show("Email không hợp lệ");
-                return;
-            }
-            if (tbSdt.Text.Length != 10)
+            if (tbSdt.Texts.Length != 10)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ");
                 return;
             }
-            if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
+            if (IsValidEmail(tbEmail.Texts) == false)
+            {
+                MessageBox.Show("Email không hợp lệ");
+                return;
+            }
+            
+            if ((tbEmail.Texts == "") || (tbDiaChi.Texts == "") || (tbSdt.Texts == "") || (tbTen.Texts == ""))
             {
                 MessageBox.Show("Vui lòng không để trống thông tin");
                 return;
             }
-            string ten = tbTen.Text.Trim();
-            string Sdt = tbSdt.Text.Trim();
-            string email = tbEmail.Text.Trim();
-            string diaChi = tbDiaChi.Text.Trim();
+            string ten = tbTen.Texts;
+            string Sdt = tbSdt.Texts;
+            string email = tbEmail.Texts;
+            string diaChi = tbDiaChi.Texts;
 
             if (sql == null)
             {
@@ -75,7 +92,7 @@ namespace WindowsFormsApp3
             }
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "Update Quan_li set DiaChi=N'" + diaChi + "', SoDienThoai='" + Sdt + "', Email='" + email + "', Ten= N'" + ten + "', MatKhau= N'" + matKhau + "' where MaQuanLi= '" + ma + "'";
+            sqlCm.CommandText = "Update Chu_ho set DiaChi=N'" + diaChi + "', SoDienThoai='" + Sdt + "', Email='" + email + "', Ten= N'" + ten + "', MatKhau= N'" + matKhau + "' where MaChuHo= '" + ma + "'";
             sqlCm.Connection = sql;
             int kq = sqlCm.ExecuteNonQuery();
             if (kq > 0)
@@ -87,17 +104,28 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Lỗi");
             }
             this.Hide();
-            FormThongTinQuanLy f = new FormThongTinQuanLy(ma);
+            FormThongTinChuHo f = new FormThongTinChuHo(ma);
             f.ShowDialog();
         }
 
         private void FormChinhSuaThongTinCH_Load(object sender, EventArgs e)
         {
-
+            tbDiaChi.Texts = diaChi;
+            tbEmail.Texts = email;
+            tbTen.Texts = ten;
+            tbSdt.Texts = sDT;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormDMKCH f = new FormDMKCH(ma);
             f.ShowDialog();
         }
@@ -107,6 +135,11 @@ namespace WindowsFormsApp3
             this.Hide();
             FormThongTinChuHo f = new FormThongTinChuHo(ma);
             f.ShowDialog();
+        }
+
+        private void tbEmail_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

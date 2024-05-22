@@ -32,6 +32,9 @@ namespace WindowsFormsApp3
 
         private void FormDSXE_Load(object sender, EventArgs e)
         {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
             dataGridView1.DataSource = getAllHopDong().Tables[0];
             DataSet getAllHopDong()
             {

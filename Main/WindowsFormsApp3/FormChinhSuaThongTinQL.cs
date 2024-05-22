@@ -37,9 +37,7 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormThongTinQuanLy f = new FormThongTinQuanLy(ma);
-            f.ShowDialog();
+            
         }
 
         private void tbTen_TextChanged(object sender, EventArgs e)
@@ -57,26 +55,58 @@ namespace WindowsFormsApp3
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (isEmail(tbEmail.Text.Trim()) == false)
-            {
-                MessageBox.Show("Email không hợp lệ");
-                return;
-            }
-            if (tbSdt.Text.Length != 10)
+            
+        }
+
+        private void FormChinhSuaThongTinQL_Load(object sender, EventArgs e)
+        {
+            tbSdt.Texts = sDT;
+            tbEmail.Texts = email;
+            tbDiaChi.Texts = diaChi;
+            tbTen.Texts = ten;
+            
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+
+        }
+
+        
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            FormDMKQL f = new FormDMKQL(ma);
+            f.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (tbSdt.Texts.Length != 10)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ");
                 return;
             }
-            if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
+            if (isEmail(tbEmail.Texts.Trim()) == false)
+            {
+                MessageBox.Show("Email không hợp lệ");
+                return;
+            }
+            
+            if ((tbEmail.Texts == "") || (tbDiaChi.Texts == "") || (tbSdt.Texts == "") || (tbTen.Texts == ""))
             {
                 MessageBox.Show("Vui lòng không để trống thông tin");
                 return;
             }
-            string ten = tbTen.Text.Trim();
-            string Sdt = tbSdt.Text.Trim();
-            string email = tbEmail.Text.Trim();
-            string diaChi = tbDiaChi.Text.Trim();
-          
+            string ten = tbTen.Texts.Trim();
+            string Sdt = tbSdt.Texts.Trim();
+            string email = tbEmail.Texts.Trim();
+            string diaChi = tbDiaChi.Texts.Trim();
+
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -103,19 +133,16 @@ namespace WindowsFormsApp3
             f.ShowDialog();
         }
 
-        private void FormChinhSuaThongTinQL_Load(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            tbDiaChi.Text = diaChi;
-            tbEmail.Text = email;
-            tbTen.Text = ten;
-            tbSdt.Text = sDT;
-            
+            this.Hide();
+            FormThongTinQuanLy f = new FormThongTinQuanLy(ma);
+            f.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            FormDMKQL f = new FormDMKQL(ma);
-            f.ShowDialog();
+
         }
     }
 }

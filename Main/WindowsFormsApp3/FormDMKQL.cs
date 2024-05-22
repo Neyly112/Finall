@@ -73,7 +73,11 @@ namespace WindowsFormsApp3
 
         private void FormDMKQL_Load(object sender, EventArgs e)
         {
-
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label8.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
         private void upDateMK(string mkMoi)
         {

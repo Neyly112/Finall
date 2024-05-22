@@ -35,6 +35,9 @@ namespace WindowsFormsApp3
         private void FormDSNTCH_Load(object sender, EventArgs e)
         {
             showNT();
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
         public void showNT()
         {

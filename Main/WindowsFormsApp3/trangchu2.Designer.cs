@@ -222,11 +222,11 @@
             this.label8.BackColor = System.Drawing.Color.Gold;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Location = new System.Drawing.Point(522, 534);
+            this.label8.Location = new System.Drawing.Point(533, 534);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 23);
+            this.label8.Size = new System.Drawing.Size(91, 23);
             this.label8.TabIndex = 35;
-            this.label8.Text = "Lập họp đồng";
+            this.label8.Text = "Hợp đồng";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // button5

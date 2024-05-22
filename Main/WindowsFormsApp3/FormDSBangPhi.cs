@@ -34,6 +34,9 @@ namespace WindowsFormsApp3
 
         private void FormDSBangPhi_Load(object sender, EventArgs e)
         {
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
             dataGridView1.DataSource = getAllHopDong().Tables[0];
             DataSet getAllHopDong()
             {
@@ -53,9 +56,10 @@ namespace WindowsFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormDieuChinhPhi f = new FormDieuChinhPhi(ma);
             f.ShowDialog();
-            this.Hide();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
