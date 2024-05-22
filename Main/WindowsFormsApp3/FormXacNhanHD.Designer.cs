@@ -183,7 +183,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(466, 307);
-            this.dateTimePicker1.MinDate = new System.DateTime(2024, 5, 22, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(300, 39);
