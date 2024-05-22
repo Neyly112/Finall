@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,23 +15,22 @@ namespace WindowsFormsApp3
     public partial class checkCode : System.Windows.Forms.Form
     {
         int code;
-        String mk;
         String sdt;
         String mail;
         ClassConnect c = new ClassConnect();
-        public checkCode(int code, string mk, String sdt, String mail)
+        public checkCode(int code, String sdt, String mail)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.code = code;
-            this.mk = mk;
             this.sdt = sdt;
             this.mail = mail;
             textBox1.TextChanged += textBox1_TextChanged;
             textBox2.TextChanged += textBox2_TextChanged;
             textBox3.TextChanged += textBox3_TextChanged;
             textBox4.TextChanged += textBox4_TextChanged;
-
+            timer1.Tick += timer1_Tick;
+            timer1.Start();
         }
 
         private void checkCode_Load(object sender, EventArgs e)
@@ -52,14 +52,13 @@ namespace WindowsFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(c.SqlConect());
+           /* SqlConnection con = new SqlConnection(c.SqlConect());
             String cd = textBox1.Text + textBox2.Text + textBox3.Text + textBox4.Text;
             int cd1 = Convert.ToInt32(cd);
             if(cd1 == code)
             {
                 con.Open();
                 String sdtN = sdt;
-                String mkN = mk;
                 String mailN = mail;
                 String sql = "UPDATE Nguoi_thue set MatKhau = N'" + mkN + "' WHERE SoDienThoai = '" + sdtN +"' and Email = '"+ mailN +"'"; 
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -73,7 +72,7 @@ namespace WindowsFormsApp3
                 else
                     MessageBox.Show(this, "Lỗi, đổi mật khẩu thất bại, kiểm tra lại số điện thoại hoặc email của bạn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 con.Close();
-            }
+            }*/
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -94,9 +93,13 @@ namespace WindowsFormsApp3
                 int cd1 = Convert.ToInt32(cd);
                 if (cd1 == code)
                 {
-                    con.Open();
+                    MessageBox.Show(this, "Mã xác nhận chính xác", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form_tao_MK NMK = new Form_tao_MK(sdt);
+                    this.Hide();
+                    timer1.Stop();
+                    NMK.ShowDialog();
+                    /*con.Open();
                     String sdtN = sdt;
-                    String mkN = mk;
                     String sql = "UPDATE Nguoi_thue set MatKhau = N'" + mkN + "' WHERE SoDienThoai = '" + sdtN + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     int rdr = cmd.ExecuteNonQuery();
@@ -109,11 +112,11 @@ namespace WindowsFormsApp3
                     }
                     else
                         MessageBox.Show(this, "Lỗi, đổi mật khẩu thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    con.Close();
+                    con.Close();*/
                 }
                 else
                 {
-                    MessageBox.Show(this, "Mã xác nhận không đúng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(this, "Mã xác nhận hết hạn hoặc mã không đúng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -130,8 +133,10 @@ namespace WindowsFormsApp3
 
         private void label4_Click(object sender, EventArgs e)
         {
-            this.Close();
-            CloseAllForms();
+            Form1 f = new Form1();
+            f.Hide();
+            timer1.Stop();
+            f.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -229,6 +234,13 @@ namespace WindowsFormsApp3
                 e.Handled = true;
                 check3();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            code = 0;  // Đặt code thành null sau 1 phút
+            timer1.Stop();
+            MessageBox.Show(this, "Mã xác nhận đã hết hạn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
