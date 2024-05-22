@@ -144,7 +144,20 @@ namespace WindowsFormsApp3
 
         public void check() 
         {   
-            if (textBox1.Text.Length != 5)
+            if(textBox1.Text == "Nhập tài khoản" && textBox2.Text == "Nhập mật khẩu") 
+            {
+                MessageBox.Show(this, "Vui lòng nhập tài khoản và mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if(textBox1.Text == "Nhập tài khoản")
+            {
+                MessageBox.Show(this, "Vui lòng nhập tài khoản", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (textBox2.Text == "Nhập mật khẩu")
+            {
+                MessageBox.Show(this, "Vui lòng nhập mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (textBox1.Text.Length != 5)
             {
                 MessageBox.Show(this, "Tài khoảng không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

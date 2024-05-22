@@ -24,12 +24,7 @@ namespace WindowsFormsApp3
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
-            {
-                textBox2.Text = "Nhập mật khẩu mới";
-                textBox2.ForeColor = Color.Silver;
-                textBox2.PasswordChar = '\0';
-            }
+           
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -62,12 +57,7 @@ namespace WindowsFormsApp3
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "Nhập mật khẩu mới")
-            {
-                textBox2.Text = "";
-                textBox2.ForeColor = Color.Black;
-                textBox2.PasswordChar = '*';
-            }
+           
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -77,26 +67,15 @@ namespace WindowsFormsApp3
 
         private void textBox3_Enter(object sender, EventArgs e)
         {
-            if (textBox3.Text == "Xác nhận mật khẩu")
-            {
-                textBox3.Text = "";
-                textBox3.ForeColor = Color.Black;
-                textBox3.PasswordChar = '*';
-
-            }
+           
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3.Text == "")
-            {
-                textBox3.Text = "Xác nhận mật khẩu";
-                textBox3.ForeColor = Color.Silver;
-                textBox3.PasswordChar = '\0';
-            }
+            
         }
 
-        private bool isEmail(string email)
+        private Boolean isEmail(string email)
         {
             if (string.IsNullOrEmpty(email))
                 return false;
@@ -114,7 +93,7 @@ namespace WindowsFormsApp3
 
         
 
-        private bool IsPasswordValid(string password, int minLength)
+        private Boolean IsPasswordValid(string password, int minLength)
         {
             // Kiểm tra độ dài của mật khẩu
             if (password.Length < minLength)
@@ -148,30 +127,47 @@ namespace WindowsFormsApp3
 
         public void check2()
         {
+
             ClassConnect c = new ClassConnect();
-            if (!isEmail(textBox1.Text))
+            if(textBox1.Text == "example@gmail.com" && textBox4.Text == "Số điện thoại") 
+            {
+                MessageBox.Show(this, "Vui lòng nhập Email và số điện thoại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(textBox1.Text == "example@gmail.com")
+            {
+                MessageBox.Show(this, "Vui lòng nhập Email.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (textBox4.Text == "Số điện thoại")
+            {
+                MessageBox.Show(this, "Vui lòng nhập số điện thoại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else if (!isEmail(textBox1.Text))
             {
                 MessageBox.Show(this, "Email bị lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (textBox4.Text.Length != 10)
             {
                 MessageBox.Show(this, "Số điện thoại bị lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-            
-            else if (textBox3.Text != textBox2.Text)
-            {
-                MessageBox.Show(this, "Nhập lại mật khẩu không đúng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 SqlConnection con = new SqlConnection(c.SqlConect());
                 con.Open();
-                String sql1 = "select * from Nguoi_thue where SoDienThoai  = '" + textBox4.Text + " ' and Email = '" + textBox1.Text + "'";
-                SqlCommand cmd1 = new SqlCommand(sql1, con);
-                SqlDataReader rdr1 = cmd1.ExecuteReader();
+                String sql1 = @"
+                SELECT SoDienThoai, Email FROM Nguoi_thue WHERE SoDienThoai = @SoDienThoai AND Email = @Email
+                UNION
+                SELECT SoDienThoai, Email FROM Quan_li WHERE SoDienThoai = @SoDienThoai AND Email = @Email
+                UNION
+                SELECT SoDienThoai, Email FROM Chu_ho WHERE SoDienThoai = @SoDienThoai AND Email = @Email";
+                SqlCommand cmd = new SqlCommand(sql1, con);
+                cmd.Parameters.AddWithValue("@SoDienThoai", textBox4.Text.Trim());
+                cmd.Parameters.AddWithValue("@Email", textBox1.Text.Trim());
+                SqlDataReader rdr1 = cmd.ExecuteReader();
                 if (!rdr1.Read())
-                {   
+                {
+                    MessageBox.Show(this, "Số điện thoại hoặc Email của bạn chưa được đăng ký.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     rdr1.Close();
                 }
                 else
@@ -193,7 +189,7 @@ namespace WindowsFormsApp3
                         smtpClient.Send(mail);
                         MessageBox.Show(this, "Đã gửi mã xác nhận về email của bạn, vui lòng nhập mã xác nhận để đổi mật khẩu", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        checkCode ck = new checkCode(code, textBox3.Text, textBox4.Text, textBox1.Text);
+                        checkCode ck = new checkCode(code, textBox4.Text, textBox1.Text);
                         ck.ShowDialog();
                     }
                     catch (Exception ex)
@@ -234,20 +230,12 @@ namespace WindowsFormsApp3
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if (textBox2.PasswordChar == '*')
-            {
-                pictureBox5.BringToFront();
-                textBox2.PasswordChar = '\0';
-            }
+           
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (textBox2.PasswordChar == '\0')
-            {
-                pictureBox6.BringToFront();
-                textBox2.PasswordChar = '*';
-            }
+           
         }
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
@@ -257,20 +245,12 @@ namespace WindowsFormsApp3
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            if (textBox3.PasswordChar == '*')
-            {
-                pictureBox7.BringToFront();
-                textBox3.PasswordChar = '\0';
-            }
+            
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            if (textBox3.PasswordChar == '\0')
-            {
-                pictureBox9.BringToFront();
-                textBox3.PasswordChar = '*';
-            }
+            
         }
 
         private void button1_KeyDown(object sender, KeyEventArgs e)
@@ -329,6 +309,16 @@ namespace WindowsFormsApp3
                 e.Handled = true;
                 check2();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
