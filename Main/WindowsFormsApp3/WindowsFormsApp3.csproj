@@ -358,6 +358,12 @@
     <Compile Include="FormHoTroKhachHang.Designer.cs">
       <DependentUpon>FormHoTroKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemPhong.Designer.cs">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongTinHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -594,6 +600,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoTroKhachHang.resx">
       <DependentUpon>FormHoTroKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemPhong.resx">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinHopDong.resx">
       <DependentUpon>FormThongTinHopDong.cs</DependentUpon>

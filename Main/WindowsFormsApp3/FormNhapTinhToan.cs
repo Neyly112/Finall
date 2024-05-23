@@ -224,7 +224,7 @@ namespace WindowsFormsApp3
             }
             double so_m3 = Convert.ToDouble(tbTienNuoc.Text);
             double soKwh = Convert.ToDouble(tbTienDien.Text);
-            string maPhong = comboBox1.Texts;
+            string maPhong = comboBox1.Text.Trim();
             funcTinhTien(so_m3, soKwh, maPhong);
         }
 

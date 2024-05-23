@@ -145,7 +145,7 @@ namespace WindowsFormsApp3
                 return;
             }
             
-            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Text.Trim()), dateTimePickerNKT.Text.ToString(), comboBox1.Texts.Trim());
+            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Text.Trim()), dateTimePickerNKT.Text.ToString(), comboBox1.Text.Trim());
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);

@@ -38,10 +38,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ngayKetThuc = new WindowsFormsApp3.UI.DatePicker();
-            this.comboBox1 = new WindowsFormsApp3.UI.ClassComboBox();
             this.ngayBatDau = new WindowsFormsApp3.UI.DatePicker();
             this.tbTienDien = new System.Windows.Forms.TextBox();
             this.tbTienNuoc = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,27 +172,6 @@
             this.ngayKetThuc.TabIndex = 41;
             this.ngayKetThuc.TextColor = System.Drawing.SystemColors.WindowText;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.comboBox1.BorderSize = 2;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox1.IconColor = System.Drawing.Color.Navy;
-            this.comboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.ListTextColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox1.Location = new System.Drawing.Point(417, 144);
-            this.comboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Size = new System.Drawing.Size(300, 30);
-            this.comboBox1.TabIndex = 40;
-            this.comboBox1.Texts = "";
-            this.comboBox1.OnSelectedIndexChanged += new System.EventHandler(this.comboBox1_OnSelectedIndexChanged);
-            // 
             // ngayBatDau
             // 
             this.ngayBatDau.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -235,15 +214,24 @@
             this.tbTienNuoc.TextChanged += new System.EventHandler(this.tbTienNuoc_TextChanged);
             this.tbTienNuoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTienNuoc_KeyPress);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(417, 146);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(300, 39);
+            this.comboBox1.TabIndex = 47;
+            // 
             // FormNhapTinhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(904, 569);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tbTienNuoc);
             this.Controls.Add(this.tbTienDien);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ngayKetThuc);
             this.Controls.Add(this.ngayBatDau);
@@ -277,10 +265,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private UI.DatePicker ngayBatDau;
-        private UI.ClassComboBox comboBox1;
         private UI.DatePicker ngayKetThuc;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox tbTienDien;
         private System.Windows.Forms.TextBox tbTienNuoc;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

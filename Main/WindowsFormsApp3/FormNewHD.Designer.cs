@@ -39,7 +39,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new WindowsFormsApp3.UI.ClassComboBox();
             this.dateTimePickerNL = new WindowsFormsApp3.UI.DatePicker();
             this.dateTimePickerNKT = new WindowsFormsApp3.UI.DatePicker();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,6 +47,7 @@
             this.tbDC = new System.Windows.Forms.TextBox();
             this.tbSDT = new System.Windows.Forms.TextBox();
             this.txTen = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,26 +184,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.comboBox1.BorderSize = 3;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.IconColor = System.Drawing.Color.Navy;
-            this.comboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox1.Location = new System.Drawing.Point(400, 468);
-            this.comboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.comboBox1.Size = new System.Drawing.Size(612, 30);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.Texts = "";
-            // 
             // dateTimePickerNL
             // 
             this.dateTimePickerNL.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -303,12 +283,23 @@
             this.txTen.Size = new System.Drawing.Size(612, 38);
             this.txTen.TabIndex = 47;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(400, 462);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(612, 39);
+            this.comboBox1.TabIndex = 52;
+            // 
             // FormNewHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1258, 777);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tbSNG);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbDC);
@@ -317,7 +308,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dateTimePickerNKT);
             this.Controls.Add(this.dateTimePickerNL);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -353,7 +343,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private UI.ClassComboBox comboBox1;
         private UI.DatePicker dateTimePickerNL;
         private UI.DatePicker dateTimePickerNKT;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -362,5 +351,6 @@
         private System.Windows.Forms.TextBox tbDC;
         private System.Windows.Forms.TextBox tbSDT;
         private System.Windows.Forms.TextBox txTen;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

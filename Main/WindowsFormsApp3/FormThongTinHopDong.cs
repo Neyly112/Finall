@@ -111,6 +111,7 @@ namespace WindowsFormsApp3
             }
             sql.Close();
             funcDeletePhongThue();
+            deleteNT();
             this.Hide();
             FormDanhSachHopDong f = new FormDanhSachHopDong(ma);
             f.ShowDialog();
@@ -162,7 +163,24 @@ namespace WindowsFormsApp3
             funcDoiTenNguoiThue(tenPhong);
         }
 
+        private void deleteNT()
+        {
+            if (sql == null)
+            {
+                sql = new SqlConnection(strSql);
+            }
+            if (sql.State == ConnectionState.Closed)
+            {
+                sql.Open();
+            }
 
+            SqlCommand sqlCm = new SqlCommand();
+            sqlCm.CommandType = CommandType.Text;
+            sqlCm.CommandText = "delete from Nguoi_thue where MaNguoiThue ='" + maNguoiThue + "'";
+            sqlCm.Connection = sql;
+            int kq = sqlCm.ExecuteNonQuery();
+            sql.Close();
+        }
         private void funcDoiTenNguoiThue(string maPhong)
         {
             if (sql == null)

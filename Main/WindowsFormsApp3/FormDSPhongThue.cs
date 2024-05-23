@@ -24,7 +24,36 @@ namespace WindowsFormsApp3
             this.ma = ma;
             strSql = c.SqlConect();
         }
-
+        private bool checkPhongDaThue(string maPhong)
+        {
+            if (sql == null)
+            {
+                sql = new SqlConnection(strSql);
+            }
+            if (sql.State == ConnectionState.Closed)
+            {
+                sql.Open();
+            }
+            SqlCommand sqlCm = new SqlCommand();
+            sqlCm.CommandType = CommandType.Text;
+            sqlCm.CommandText = "select * from Phong_thue_so_huu where MaPhong= '" + maPhong + "'";
+            sqlCm.Connection = sql;
+            SqlDataReader reader = sqlCm.ExecuteReader();
+            int kq = 0;
+            while (reader.Read())
+            {
+                kq = 1;
+            }
+            reader.Close();
+            if (kq == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void FormDSPhongThue_Load(object sender, EventArgs e)
         {
             label1.BackColor = System.Drawing.Color.Transparent;
@@ -56,12 +85,57 @@ namespace WindowsFormsApp3
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = new DataGridViewRow();
+            row = dataGridView1.Rows[e.RowIndex];
+            string maPhong = Convert.ToString(row.Cells["MaPhong"].Value);
+            if (checkPhongDaThue(maPhong) == true)
+            {
+                MessageBox.Show("Phòng đang được thuê, không thể xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else {
+                if (MessageBox.Show("Bạn có chắc muốn xóa không ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (sql == null)
+                    {
+                        sql = new SqlConnection(strSql);
+                    }
+                    if (sql.State == ConnectionState.Closed)
+                    {
+                        sql.Open();
+                    }
+                    SqlCommand sqlCm = new SqlCommand();
+                    sqlCm.CommandType = CommandType.Text;
+                    sqlCm.CommandText = "delete from Phong_cho_thue where MaPhong = '" + maPhong + "'";
+                    sqlCm.Connection = sql;
 
+                    int k = sqlCm.ExecuteNonQuery();
+                    if (k > 0)
+                    {
+                        MessageBox.Show("Đã xóa");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi");
+                    }
+                    sql.Close();
+                    this.Hide();
+                    FormDSPhongThue f = new FormDSPhongThue(ma);
+                    f.ShowDialog();
+                } 
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormThemPhong f = new FormThemPhong(ma);
+            f.ShowDialog();
         }
     }
 }
