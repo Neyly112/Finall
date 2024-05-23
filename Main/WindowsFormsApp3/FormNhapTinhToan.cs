@@ -203,23 +203,23 @@ namespace WindowsFormsApp3
             
             if ((tbTienDien.Text == "") || (tbTienNuoc.Text == ""))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if ((Convert.ToInt32(tbTienDien.Text) <= 0) || (Convert.ToInt32(tbTienNuoc.Text) <= 0))
             {
-                MessageBox.Show("Các số liệu phải lớn hơn 0");
+                MessageBox.Show("Các số liệu phải lớn hơn 0.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string tmp = DateTime.Now.ToString("yyyy-MM-dd");
             if (ngayBatDau.Value.ToString("yyyy-MM-dd") != tmp)
             {
-                MessageBox.Show("Ngày lập phải là hôm nay");
+                MessageBox.Show("Ngày lập phải là hôm nay.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (ngayBatDau.Value.ToString("yyyy-MM-dd") == ngayKetThuc.Value.ToString("yyyy-MM-dd"))
             {
-                MessageBox.Show("Trùng ngày tính");
+                MessageBox.Show("Trùng ngày tính.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             double so_m3 = Convert.ToDouble(tbTienNuoc.Text);

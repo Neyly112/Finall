@@ -32,14 +32,14 @@ namespace WindowsFormsApp3
                tbTienNuoc.Text.Trim() == "" || tbTienXeMay.Text.Trim() == "" ||
                tbTienXeDap.Text.Trim() == "" || tbTienXe15Tan.Text.Trim() == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if ((Convert.ToInt32(tbPhiSinhHoat.Text.Trim()) <= 0) || (Convert.ToInt32(tbTienDien.Text.Trim()) <= 0)
                 || (Convert.ToInt32(tbTienNuoc.Text.Trim()) <= 0) || (Convert.ToInt32(tbTienXe15Tan.Text.Trim()) <= 0)
                 || (Convert.ToInt32(tbTienXeDap.Text.Trim()) <= 0) || (Convert.ToInt32(tbTienXeMay.Text.Trim()) <= 0))
             {
-                MessageBox.Show("Các số liệu không hợp lệ");
+                MessageBox.Show("Các số liệu không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

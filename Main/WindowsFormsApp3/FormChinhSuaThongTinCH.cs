@@ -63,18 +63,18 @@ namespace WindowsFormsApp3
         {
             if (tbSdt.Text.Length != 10)
             {
-                MessageBox.Show("Số điện thoại không hợp lệ");
+                MessageBox.Show("Số điện thoại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (IsValidEmail(tbEmail.Text) == false)
             {
-                MessageBox.Show("Email không hợp lệ");
+                MessageBox.Show("Email không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
             if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
             {
-                MessageBox.Show("Vui lòng không để trống thông tin");
+                MessageBox.Show("Vui lòng không để trống thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string ten = tbTen.Text;
@@ -101,7 +101,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             this.Hide();
             FormThongTinChuHo f = new FormThongTinChuHo(ma);

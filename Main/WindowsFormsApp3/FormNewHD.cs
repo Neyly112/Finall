@@ -111,22 +111,22 @@ namespace WindowsFormsApp3
             
             if ((tbDC.Text.Trim() == "") || (tbEmail.Text.Trim() == "") || (tbSDT.Text.Trim() == "") || (tbSNG.Text.Trim() == "") || (txTen.Text.Trim() == ""))
             {
-                MessageBox.Show("Không để trống thông tin");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if ((tbSDT.Text.Trim().Length != 10))
             {
-                MessageBox.Show("Số điện thoại không phù hợp");
+                MessageBox.Show("Số điện thoại không phù hợp.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (isEmail(tbEmail.Text.Trim()) == false)
             {
-                MessageBox.Show("Nhập sai email");
+                MessageBox.Show("Nhập sai email.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Convert.ToInt32(tbSNG.Text.Trim()) <= 0)
             {
-                MessageBox.Show("Sai số người");
+                MessageBox.Show("Sai số người.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
@@ -136,12 +136,12 @@ namespace WindowsFormsApp3
             string tmp = DateTime.Now.ToString("yyyy-MM-dd");
             if (dateTimePickerNL.Value.ToString("yyyy-MM-dd") != tmp)
             {
-                MessageBox.Show("Ngày lập phải là hôm nay");
+                MessageBox.Show("Ngày lập phải là hôm nay.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (dateTimePickerNKT.Value.ToString() == dateTimePickerNL.Value.ToString())
             {
-                MessageBox.Show("Trùng ngày lập và kết thúc");
+                MessageBox.Show("Trùng ngày lập và kết thúc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
@@ -159,7 +159,7 @@ namespace WindowsFormsApp3
             funcAddHD(h.getNgayKetThuc().Trim(), Convert.ToInt32(h.getSoNguoi()), h.getNgayLap().Trim(), h.getTenPhong());
             funcInsertPhongThueSH(h.getTenPhong());
             getMailCH();
-            MessageBox.Show("kkk");
+            
             MailMessage mail = new MailMessage();
             MailAddress to = new MailAddress(emailCH);
             

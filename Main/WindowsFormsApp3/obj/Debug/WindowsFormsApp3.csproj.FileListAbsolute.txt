@@ -1050,3 +1050,4 @@ E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 =======
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form3.resources
 >>>>>>> Stashed changes
+D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form_tao_MK.resources

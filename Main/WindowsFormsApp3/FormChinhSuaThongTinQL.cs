@@ -87,18 +87,18 @@ namespace WindowsFormsApp3
         {
             if (tbSdt.Text.Length != 10)
             {
-                MessageBox.Show("Số điện thoại không hợp lệ");
+                MessageBox.Show("Số điện thoại không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (isEmail(tbEmail.Text.Trim()) == false)
             {
-                MessageBox.Show("Email không hợp lệ");
+                MessageBox.Show("Email không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
             if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
             {
-                MessageBox.Show("Vui lòng không để trống thông tin");
+                MessageBox.Show("Vui lòng không để trống thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string ten = tbTen.Text.Trim();
