@@ -59,13 +59,13 @@ namespace WindowsFormsApp3
             getGiaPhong();
             tongTien += giaPhong;
             lbMaCanHo.Text = maCanHo;
-            lbTongTienDien.Text = tongTienDien.ToString();
-            lbTongTienNuoc.Text = tongTienNuoc.ToString();
-            lbPhiSinhHoat.Text = phiSinhHoat.ToString();
-            lbTongTien.Text = tongTien.ToString();
+            lbTongTienDien.Text = tongTienDien.ToString() + " VNĐ";
+            lbTongTienNuoc.Text = tongTienNuoc.ToString() + " VNĐ";
+            lbPhiSinhHoat.Text = phiSinhHoat.ToString() + " VNĐ";
+            lbTongTien.Text = tongTien.ToString() + " VNĐ";
             lbNgayLap.Text = ngayLap.ToString();
-            lbTienThuePhong.Text = giaPhong.ToString();
-            lbTienXe.Text = tongTienXe.ToString();
+            lbTienThuePhong.Text = giaPhong.ToString() + " VNĐ";
+            lbTienXe.Text = tongTienXe.ToString() + " VNĐ";
             label3.Text = ngayKT.ToString();
             lbXeDap.Text = "Xe đạp: " + xeDap.ToString() + " chiếc";
             lbXeMay.Text = "Xe máy: " + xeMay.ToString() + " chiếc";
@@ -81,9 +81,18 @@ namespace WindowsFormsApp3
             lbXeDap.BackColor = System.Drawing.Color.Transparent;
             lbXeDuoi15Tan.BackColor= System.Drawing.Color.Transparent;
             lbXeMay.BackColor= System.Drawing.Color.Transparent;
-            label12.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label5.BackColor = System.Drawing.Color.Transparent;
+            label6.BackColor = System.Drawing.Color.Transparent;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            label8.BackColor = System.Drawing.Color.Transparent;
+            label9.BackColor = System.Drawing.Color.Transparent;
+            label10.BackColor = System.Drawing.Color.Transparent;
+            label11.BackColor = System.Drawing.Color.Transparent;
         }
 
         private void button1_Click(object sender, EventArgs e)

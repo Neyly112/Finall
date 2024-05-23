@@ -85,7 +85,6 @@ namespace WindowsFormsApp3
             label4.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
             label7.BackColor = System.Drawing.Color.Transparent;
-            label5.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
            
             for (int i = 0; i < countXe; i++)
@@ -176,7 +175,6 @@ namespace WindowsFormsApp3
 
                 FormTongTien f = new FormTongTien(ma, maCanHo, tongTienNuoc, tongTienDien, phiSinhHoatt, tongTien, maBangPhi, ngayBatDau.Text.Trim(), ngayKetThuc.Text.Trim(), so_m3, soKwh, xeMay, xeDap, xe_duoi_1_5_tan, tongTienXe);
                 f.ShowDialog();
-
             }
             reader.Close();
         }
@@ -195,19 +193,20 @@ namespace WindowsFormsApp3
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            trangchu t = new trangchu(ma);
+            FormDSHDQL t = new FormDSHDQL(ma);
             t.ShowDialog();
 
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if ((tbTienDien.Texts == "") || (tbTienNuoc.Texts == ""))
+            
+            if ((tbTienDien.Text == "") || (tbTienNuoc.Text == ""))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            if ((Convert.ToInt32(tbTienDien.Texts) <= 0) || (Convert.ToInt32(tbTienNuoc.Texts) <= 0))
+            if ((Convert.ToInt32(tbTienDien.Text) <= 0) || (Convert.ToInt32(tbTienNuoc.Text) <= 0))
             {
                 MessageBox.Show("Các số liệu phải lớn hơn 0");
                 return;
@@ -223,8 +222,8 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Trùng ngày tính");
                 return;
             }
-            double so_m3 = Convert.ToDouble(tbTienNuoc.Texts);
-            double soKwh = Convert.ToDouble(tbTienDien.Texts);
+            double so_m3 = Convert.ToDouble(tbTienNuoc.Text);
+            double soKwh = Convert.ToDouble(tbTienDien.Text);
             string maPhong = comboBox1.Texts;
             funcTinhTien(so_m3, soKwh, maPhong);
         }
@@ -302,6 +301,71 @@ namespace WindowsFormsApp3
         private void button3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbTienDien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbTienDien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keycode = e.KeyChar;
+            int c = (int)keycode;
+            // Kiểm tra ký tự vừa nhập vào có phải là các số nằm trong khoảng
+            // 0..9 hoặc ký tự "." hoặc "-" hoặc "Backspace"
+            if ((c >= 48) && (c <= 57) || (c == 45) || (c == 46) || (c == 8))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Chỉ được nhập ký tự số", "Thông báo");
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTienDien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbTienNuoc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbTienNuoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

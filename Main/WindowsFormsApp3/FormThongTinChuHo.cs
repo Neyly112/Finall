@@ -72,7 +72,6 @@ namespace WindowsFormsApp3
             lbMatKhau.BackColor = System.Drawing.Color.Transparent;
             lbSdt.BackColor = System.Drawing.Color.Transparent;
             lbTen.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
 

@@ -43,7 +43,6 @@ namespace WindowsFormsApp3
             label6.BackColor = System.Drawing.Color.Transparent;
             label7.BackColor = System.Drawing.Color.Transparent;
             label8.BackColor = System.Drawing.Color.Transparent;
-            label9.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
             labelLHD.BackColor = System.Drawing.Color.Transparent;
             dateTimePickerNKT.Value = DateTime.Now;
@@ -107,25 +106,25 @@ namespace WindowsFormsApp3
         private void button2_Click(object sender, EventArgs e)
         {
             
-            NguoiThue n = new NguoiThue(txTen.Texts.Trim(), tbDC.Texts.Trim(), tbEmail.Texts.Trim(), tbSDT.Texts.Trim(),  "1", "1");
+            NguoiThue n = new NguoiThue(txTen.Text.Trim(), tbDC.Text.Trim(), tbEmail.Text.Trim(), tbSDT.Text.Trim(),  "1", "1");
             
             
-            if ((tbDC.Texts == "") || (tbEmail.Texts == "") || (tbSDT.Texts == "") || (tbSNG.Texts == "") || (txTen.Texts == ""))
+            if ((tbDC.Text.Trim() == "") || (tbEmail.Text.Trim() == "") || (tbSDT.Text.Trim() == "") || (tbSNG.Text.Trim() == "") || (txTen.Text.Trim() == ""))
             {
                 MessageBox.Show("Không để trống thông tin");
                 return;
             }
-            if ((tbSDT.Texts.Length != 10))
+            if ((tbSDT.Text.Trim().Length != 10))
             {
                 MessageBox.Show("Số điện thoại không phù hợp");
                 return;
             }
-            if (isEmail(tbEmail.Texts) == false)
+            if (isEmail(tbEmail.Text.Trim()) == false)
             {
                 MessageBox.Show("Nhập sai email");
                 return;
             }
-            if (Convert.ToInt32(tbSNG.Texts.Trim()) <= 0)
+            if (Convert.ToInt32(tbSNG.Text.Trim()) <= 0)
             {
                 MessageBox.Show("Sai số người");
                 return;
@@ -146,7 +145,7 @@ namespace WindowsFormsApp3
                 return;
             }
             
-            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Texts), dateTimePickerNKT.Text.ToString(), comboBox1.Texts.Trim());
+            HopDong h = new HopDong(dateTimePickerNL.Text.ToString(), Convert.ToInt32(tbSNG.Text.Trim()), dateTimePickerNKT.Text.ToString(), comboBox1.Texts.Trim());
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -357,9 +356,34 @@ namespace WindowsFormsApp3
 
         }
 
-        private void tbEmail_TextChanged(object sender, EventArgs e)
+        private void tbSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbSNG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

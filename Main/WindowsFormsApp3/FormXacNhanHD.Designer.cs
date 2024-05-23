@@ -41,13 +41,13 @@
             this.tbSoNg = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new WindowsFormsApp3.UI.DatePicker();
             this.dateTimePicker2 = new WindowsFormsApp3.UI.DatePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbTenPhong
             // 
+            this.tbTenPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbTenPhong.AutoSize = true;
             this.tbTenPhong.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbTenPhong.Location = new System.Drawing.Point(460, 125);
@@ -58,6 +58,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(172, 243);
@@ -68,6 +69,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -83,6 +85,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(172, 370);
@@ -93,6 +96,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(172, 307);
@@ -103,6 +107,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(172, 179);
@@ -113,6 +118,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThoat.BackColor = System.Drawing.Color.Gold;
             this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnThoat.FlatAppearance.BorderSize = 0;
@@ -129,6 +135,7 @@
             // 
             // lbTenPhong
             // 
+            this.lbTenPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTenPhong.AutoSize = true;
             this.lbTenPhong.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTenPhong.Location = new System.Drawing.Point(172, 121);
@@ -139,6 +146,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -154,6 +162,7 @@
             // 
             // tbTenNguoiThue
             // 
+            this.tbTenNguoiThue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbTenNguoiThue.AutoSize = true;
             this.tbTenNguoiThue.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbTenNguoiThue.Location = new System.Drawing.Point(460, 184);
@@ -165,6 +174,7 @@
             // 
             // tbSoNg
             // 
+            this.tbSoNg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbSoNg.AutoSize = true;
             this.tbSoNg.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.tbSoNg.Location = new System.Drawing.Point(460, 243);
@@ -175,6 +185,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.BorderColor = System.Drawing.Color.DarkKhaki;
             this.dateTimePicker1.BorderSize = 1;
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F);
@@ -193,6 +204,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker2.BorderColor = System.Drawing.Color.DarkKhaki;
             this.dateTimePicker2.BorderSize = 1;
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F);
@@ -208,18 +220,6 @@
             this.dateTimePicker2.SkinColor = System.Drawing.SystemColors.ControlLight;
             this.dateTimePicker2.TabIndex = 41;
             this.dateTimePicker2.TextColor = System.Drawing.SystemColors.WindowText;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Gold;
-            this.label5.Location = new System.Drawing.Point(13, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 46);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Amana";
             // 
             // pictureBox2
             // 
@@ -238,7 +238,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(910, 556);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -253,6 +252,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lbTenPhong);
+            this.MinimumSize = new System.Drawing.Size(928, 603);
             this.Name = "FormXacNhanHD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormXacNhanHD";
@@ -278,7 +278,6 @@
         private System.Windows.Forms.Label tbSoNg;
         private UI.DatePicker dateTimePicker1;
         private UI.DatePicker dateTimePicker2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -60,17 +60,16 @@ namespace WindowsFormsApp3
 
         private void FormChinhSuaThongTinQL_Load(object sender, EventArgs e)
         {
-            tbSdt.Texts = sDT;
-            tbEmail.Texts = email;
-            tbDiaChi.Texts = diaChi;
-            tbTen.Texts = ten;
+            tbSdt.Text = sDT;
+            tbEmail.Text = email;
+            tbDiaChi.Text = diaChi;
+            tbTen.Text = ten;
             
             label1.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
             label4.BackColor = System.Drawing.Color.Transparent;
             label5.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
 
         }
@@ -86,26 +85,26 @@ namespace WindowsFormsApp3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (tbSdt.Texts.Length != 10)
+            if (tbSdt.Text.Length != 10)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ");
                 return;
             }
-            if (isEmail(tbEmail.Texts.Trim()) == false)
+            if (isEmail(tbEmail.Text.Trim()) == false)
             {
                 MessageBox.Show("Email không hợp lệ");
                 return;
             }
             
-            if ((tbEmail.Texts == "") || (tbDiaChi.Texts == "") || (tbSdt.Texts == "") || (tbTen.Texts == ""))
+            if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
             {
                 MessageBox.Show("Vui lòng không để trống thông tin");
                 return;
             }
-            string ten = tbTen.Texts.Trim();
-            string Sdt = tbSdt.Texts.Trim();
-            string email = tbEmail.Texts.Trim();
-            string diaChi = tbDiaChi.Texts.Trim();
+            string ten = tbTen.Text.Trim();
+            string Sdt = tbSdt.Text.Trim();
+            string email = tbEmail.Text.Trim();
+            string diaChi = tbDiaChi.Text.Trim();
 
             if (sql == null)
             {
@@ -143,6 +142,25 @@ namespace WindowsFormsApp3
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbTen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void tbSdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

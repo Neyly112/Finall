@@ -60,9 +60,19 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((tbMkCu.Texts == "") || (tbMkMoi.Texts == ""))
+            if ((tbMkCu.Texts == "") || (tbMkMoi.Texts == "") || (tbXacNhan.Texts == ""))
             {
                 MessageBox.Show("Vui lòng nhập thông tin");
+                return;
+            }
+            if ((tbMkCu.Texts == tbMkMoi.Texts))
+            {
+                MessageBox.Show("Mật khẩu mới trùng mật khẩu cũ");
+                return;
+            }
+            if ((tbXacNhan.Texts != tbMkMoi.Texts))
+            {
+                MessageBox.Show("Sai mật khẩu xác nhận");
                 return;
             }
             string matKhauCu = tbMkCu.Texts;
@@ -108,8 +118,8 @@ namespace WindowsFormsApp3
             label1.BackColor = System.Drawing.Color.Transparent;
             label2.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
-            label8.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
         }
     }
 }

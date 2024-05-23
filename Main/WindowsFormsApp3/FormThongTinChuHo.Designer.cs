@@ -41,13 +41,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbMatKhau = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -63,6 +63,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThoat.BackColor = System.Drawing.Color.Gold;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -78,9 +79,10 @@
             // 
             // lbDiaChi
             // 
+            this.lbDiaChi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDiaChi.AutoSize = true;
             this.lbDiaChi.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbDiaChi.Location = new System.Drawing.Point(457, 339);
+            this.lbDiaChi.Location = new System.Drawing.Point(354, 334);
             this.lbDiaChi.Name = "lbDiaChi";
             this.lbDiaChi.Size = new System.Drawing.Size(97, 37);
             this.lbDiaChi.TabIndex = 34;
@@ -88,9 +90,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(209, 339);
+            this.label6.Location = new System.Drawing.Point(106, 334);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 37);
             this.label6.TabIndex = 33;
@@ -98,9 +101,10 @@
             // 
             // lbEmail
             // 
+            this.lbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbEmail.Location = new System.Drawing.Point(457, 282);
+            this.lbEmail.Location = new System.Drawing.Point(354, 277);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(97, 37);
             this.lbEmail.TabIndex = 32;
@@ -108,9 +112,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(209, 282);
+            this.label5.Location = new System.Drawing.Point(106, 277);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 37);
             this.label5.TabIndex = 31;
@@ -118,6 +123,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(274, 62);
@@ -128,9 +134,10 @@
             // 
             // lbSdt
             // 
+            this.lbSdt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbSdt.AutoSize = true;
             this.lbSdt.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbSdt.Location = new System.Drawing.Point(457, 227);
+            this.lbSdt.Location = new System.Drawing.Point(354, 222);
             this.lbSdt.Name = "lbSdt";
             this.lbSdt.Size = new System.Drawing.Size(97, 37);
             this.lbSdt.TabIndex = 29;
@@ -138,9 +145,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(209, 227);
+            this.label3.Location = new System.Drawing.Point(106, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(188, 37);
             this.label3.TabIndex = 28;
@@ -148,9 +156,10 @@
             // 
             // lbTen
             // 
+            this.lbTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTen.Location = new System.Drawing.Point(457, 172);
+            this.lbTen.Location = new System.Drawing.Point(354, 167);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(97, 37);
             this.lbTen.TabIndex = 27;
@@ -158,9 +167,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(209, 172);
+            this.label1.Location = new System.Drawing.Point(106, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 37);
             this.label1.TabIndex = 26;
@@ -168,9 +178,10 @@
             // 
             // lbMatKhau
             // 
+            this.lbMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbMatKhau.AutoSize = true;
             this.lbMatKhau.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbMatKhau.Location = new System.Drawing.Point(457, 392);
+            this.lbMatKhau.Location = new System.Drawing.Point(354, 387);
             this.lbMatKhau.Name = "lbMatKhau";
             this.lbMatKhau.Size = new System.Drawing.Size(97, 37);
             this.lbMatKhau.TabIndex = 40;
@@ -178,25 +189,14 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(209, 392);
+            this.label7.Location = new System.Drawing.Point(106, 387);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 37);
             this.label7.TabIndex = 39;
             this.label7.Text = "Mật khẩu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(10, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 46);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Amana";
             // 
             // pictureBox2
             // 
@@ -215,7 +215,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(863, 559);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbMatKhau);
             this.Controls.Add(this.label7);
@@ -230,6 +229,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbTen);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(881, 606);
             this.Name = "FormThongTinChuHo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThongTinChuHo";
@@ -255,7 +255,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbMatKhau;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

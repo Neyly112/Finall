@@ -61,26 +61,26 @@ namespace WindowsFormsApp3
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (tbSdt.Texts.Length != 10)
+            if (tbSdt.Text.Length != 10)
             {
                 MessageBox.Show("Số điện thoại không hợp lệ");
                 return;
             }
-            if (IsValidEmail(tbEmail.Texts) == false)
+            if (IsValidEmail(tbEmail.Text) == false)
             {
                 MessageBox.Show("Email không hợp lệ");
                 return;
             }
             
-            if ((tbEmail.Texts == "") || (tbDiaChi.Texts == "") || (tbSdt.Texts == "") || (tbTen.Texts == ""))
+            if ((tbEmail.Text == "") || (tbDiaChi.Text == "") || (tbSdt.Text == "") || (tbTen.Text == ""))
             {
                 MessageBox.Show("Vui lòng không để trống thông tin");
                 return;
             }
-            string ten = tbTen.Texts;
-            string Sdt = tbSdt.Texts;
-            string email = tbEmail.Texts;
-            string diaChi = tbDiaChi.Texts;
+            string ten = tbTen.Text;
+            string Sdt = tbSdt.Text;
+            string email = tbEmail.Text;
+            string diaChi = tbDiaChi.Text;
 
             if (sql == null)
             {
@@ -110,16 +110,16 @@ namespace WindowsFormsApp3
 
         private void FormChinhSuaThongTinCH_Load(object sender, EventArgs e)
         {
-            tbDiaChi.Texts = diaChi;
-            tbEmail.Texts = email;
-            tbTen.Texts = ten;
-            tbSdt.Texts = sDT;
+            tbDiaChi.Text = diaChi;
+            tbEmail.Text = email;
+            tbTen.Text = ten;
+            tbSdt.Text = sDT;
             label1.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
             label4.BackColor = System.Drawing.Color.Transparent;
             label5.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
+            
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
 
@@ -140,6 +140,20 @@ namespace WindowsFormsApp3
         private void tbEmail_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbSdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

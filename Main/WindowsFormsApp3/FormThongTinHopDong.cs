@@ -129,7 +129,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập thông tin");
                 return;
             }
-            if (Convert.ToInt32(tbSoNg.Texts) <= 0 )
+            if (Convert.ToInt32(tbSoNg.Text) <= 0 )
             {
                 MessageBox.Show("Số người ở không phù hợp");
                 return;
@@ -145,7 +145,7 @@ namespace WindowsFormsApp3
             
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "update Hop_dong set NgayKetThuc = '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "', SoNguoiO='" + tbSoNg.Texts + "' where MaPhong = '" + tenPhong + "'";
+            sqlCm.CommandText = "update Hop_dong set NgayKetThuc = '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "', SoNguoiO='" + tbSoNg.Text + "' where MaPhong = '" + tenPhong + "'";
             sqlCm.Connection = sql;
             
             MessageBox.Show("kkk");
@@ -176,7 +176,7 @@ namespace WindowsFormsApp3
 
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
-            sqlCm.CommandText = "update Nguoi_thue set Ten = N'" + tbTenNguoiThue.Texts + "' where MaNguoiThue = '" + maNguoiThue + "'";
+            sqlCm.CommandText = "update Nguoi_thue set Ten = N'" + tbTenNguoiThue.Text.Trim() + "' where MaNguoiThue = '" + maNguoiThue + "'";
             sqlCm.Connection = sql;
             int kq = sqlCm.ExecuteNonQuery();
             sql.Close();
@@ -203,18 +203,19 @@ namespace WindowsFormsApp3
         private void FormHuyHopDong_Load(object sender, EventArgs e)
         {
             funcGetTenNguoiThue();
-            tbTenNguoiThue.Texts = tenNguoiThue;
+            tbTenNguoiThue.Text = tenNguoiThue;
             tbTenPhong.Text = tenPhong;
             dateTimePicker1.Text = ngayBD;
             dateTimePicker2.Text = ngayKT;
-            tbSoNg.Texts = soNg;
+            tbSoNg.Text = soNg;
             label1.BackColor = System.Drawing.Color.Transparent;
             label2.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
             label4.BackColor = System.Drawing.Color.Transparent;
             tbTenPhong.BackColor = System.Drawing.Color.Transparent;
-            label5.BackColor = System.Drawing.Color.Transparent;
+            
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            lbTenPhong.BackColor = System.Drawing.Color.Transparent;
 
         }
 
@@ -258,6 +259,39 @@ namespace WindowsFormsApp3
         private void tbSoNg_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbSoNg_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSoNg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTenNguoiThue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = false;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

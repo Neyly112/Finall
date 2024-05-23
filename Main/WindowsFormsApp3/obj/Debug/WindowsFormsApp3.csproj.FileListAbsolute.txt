@@ -919,6 +919,7 @@ D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsF.90B8DF9B.Up2Date
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.UI.UserControlBTN.resources
+<<<<<<< Updated upstream
 E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\bin\Debug\Database2.mdf
 E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\bin\Debug\Database2_log.ldf
 E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\bin\Debug\QLCH1.mdf
@@ -1046,3 +1047,6 @@ E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.Core
 E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
 E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 E:\GITHUB_AN\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+=======
+D:\Bai Tap\Cuu2\Finall\Main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form3.resources
+>>>>>>> Stashed changes

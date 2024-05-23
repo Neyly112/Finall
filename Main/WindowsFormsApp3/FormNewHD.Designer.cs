@@ -39,21 +39,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txTen = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbSDT = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbDC = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbEmail = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbSNG = new WindowsFormsApp3.UI.UserControlBTN();
             this.comboBox1 = new WindowsFormsApp3.UI.ClassComboBox();
             this.dateTimePickerNL = new WindowsFormsApp3.UI.DatePicker();
             this.dateTimePickerNKT = new WindowsFormsApp3.UI.DatePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tbSNG = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbDC = new System.Windows.Forms.TextBox();
+            this.tbSDT = new System.Windows.Forms.TextBox();
+            this.txTen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelLHD
             // 
+            this.labelLHD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLHD.AutoSize = true;
             this.labelLHD.BackColor = System.Drawing.Color.White;
             this.labelLHD.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -66,6 +66,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(127, 135);
@@ -76,6 +77,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(127, 194);
@@ -86,6 +88,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(127, 259);
@@ -96,6 +99,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(127, 327);
@@ -106,6 +110,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(127, 398);
@@ -116,6 +121,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(127, 462);
@@ -126,6 +132,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(133, 535);
@@ -136,6 +143,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.Location = new System.Drawing.Point(133, 609);
@@ -146,6 +154,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,6 +170,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,103 +184,9 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txTen
-            // 
-            this.txTen.BackColor = System.Drawing.SystemColors.Window;
-            this.txTen.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.txTen.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txTen.BorderSize = 5;
-            this.txTen.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txTen.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txTen.Location = new System.Drawing.Point(400, 135);
-            this.txTen.Margin = new System.Windows.Forms.Padding(4);
-            this.txTen.Multiline = false;
-            this.txTen.Name = "txTen";
-            this.txTen.Padding = new System.Windows.Forms.Padding(7);
-            this.txTen.PasswordChar = false;
-            this.txTen.Size = new System.Drawing.Size(612, 41);
-            this.txTen.TabIndex = 23;
-            this.txTen.Texts = "";
-            this.txTen.UnderlinedStyle = true;
-            // 
-            // tbSDT
-            // 
-            this.tbSDT.BackColor = System.Drawing.SystemColors.Window;
-            this.tbSDT.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbSDT.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbSDT.BorderSize = 5;
-            this.tbSDT.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSDT.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbSDT.Location = new System.Drawing.Point(400, 194);
-            this.tbSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.tbSDT.Multiline = false;
-            this.tbSDT.Name = "tbSDT";
-            this.tbSDT.Padding = new System.Windows.Forms.Padding(7);
-            this.tbSDT.PasswordChar = false;
-            this.tbSDT.Size = new System.Drawing.Size(612, 41);
-            this.tbSDT.TabIndex = 24;
-            this.tbSDT.Texts = "";
-            this.tbSDT.UnderlinedStyle = true;
-            // 
-            // tbDC
-            // 
-            this.tbDC.BackColor = System.Drawing.SystemColors.Window;
-            this.tbDC.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbDC.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbDC.BorderSize = 5;
-            this.tbDC.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbDC.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbDC.Location = new System.Drawing.Point(400, 259);
-            this.tbDC.Margin = new System.Windows.Forms.Padding(4);
-            this.tbDC.Multiline = false;
-            this.tbDC.Name = "tbDC";
-            this.tbDC.Padding = new System.Windows.Forms.Padding(7);
-            this.tbDC.PasswordChar = false;
-            this.tbDC.Size = new System.Drawing.Size(612, 41);
-            this.tbDC.TabIndex = 25;
-            this.tbDC.Texts = "";
-            this.tbDC.UnderlinedStyle = true;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.tbEmail.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbEmail.BorderSize = 5;
-            this.tbEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbEmail.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbEmail.Location = new System.Drawing.Point(400, 327);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.tbEmail.Multiline = false;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Padding = new System.Windows.Forms.Padding(7);
-            this.tbEmail.PasswordChar = false;
-            this.tbEmail.Size = new System.Drawing.Size(612, 41);
-            this.tbEmail.TabIndex = 26;
-            this.tbEmail.Texts = "";
-            this.tbEmail.UnderlinedStyle = true;
-            // 
-            // tbSNG
-            // 
-            this.tbSNG.BackColor = System.Drawing.SystemColors.Window;
-            this.tbSNG.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbSNG.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbSNG.BorderSize = 5;
-            this.tbSNG.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSNG.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbSNG.Location = new System.Drawing.Point(400, 398);
-            this.tbSNG.Margin = new System.Windows.Forms.Padding(4);
-            this.tbSNG.Multiline = false;
-            this.tbSNG.Name = "tbSNG";
-            this.tbSNG.Padding = new System.Windows.Forms.Padding(7);
-            this.tbSNG.PasswordChar = false;
-            this.tbSNG.Size = new System.Drawing.Size(612, 41);
-            this.tbSNG.TabIndex = 27;
-            this.tbSNG.Texts = "";
-            this.tbSNG.UnderlinedStyle = true;
-            // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox1.BorderColor = System.Drawing.Color.DarkKhaki;
             this.comboBox1.BorderSize = 3;
@@ -290,6 +206,7 @@
             // 
             // dateTimePickerNL
             // 
+            this.dateTimePickerNL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerNL.BorderColor = System.Drawing.Color.DarkKhaki;
             this.dateTimePickerNL.BorderSize = 1;
             this.dateTimePickerNL.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F);
@@ -307,6 +224,7 @@
             // 
             // dateTimePickerNKT
             // 
+            this.dateTimePickerNKT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerNKT.BorderColor = System.Drawing.Color.DarkKhaki;
             this.dateTimePickerNKT.BorderSize = 1;
             this.dateTimePickerNKT.CalendarFont = new System.Drawing.Font("Times New Roman", 16.2F);
@@ -322,18 +240,6 @@
             this.dateTimePickerNKT.TabIndex = 41;
             this.dateTimePickerNKT.TextColor = System.Drawing.SystemColors.WindowText;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Control;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Gold;
-            this.label9.Location = new System.Drawing.Point(13, 95);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 46);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "Amana";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -345,22 +251,73 @@
             this.pictureBox2.TabIndex = 45;
             this.pictureBox2.TabStop = false;
             // 
+            // tbSNG
+            // 
+            this.tbSNG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbSNG.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.tbSNG.Location = new System.Drawing.Point(400, 400);
+            this.tbSNG.Multiline = true;
+            this.tbSNG.Name = "tbSNG";
+            this.tbSNG.Size = new System.Drawing.Size(612, 38);
+            this.tbSNG.TabIndex = 51;
+            this.tbSNG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSNG_KeyPress);
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbEmail.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.tbEmail.Location = new System.Drawing.Point(400, 329);
+            this.tbEmail.Multiline = true;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(612, 38);
+            this.tbEmail.TabIndex = 50;
+            // 
+            // tbDC
+            // 
+            this.tbDC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbDC.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.tbDC.Location = new System.Drawing.Point(400, 261);
+            this.tbDC.Multiline = true;
+            this.tbDC.Name = "tbDC";
+            this.tbDC.Size = new System.Drawing.Size(612, 38);
+            this.tbDC.TabIndex = 49;
+            // 
+            // tbSDT
+            // 
+            this.tbSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbSDT.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.tbSDT.Location = new System.Drawing.Point(400, 196);
+            this.tbSDT.Multiline = true;
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Size = new System.Drawing.Size(612, 38);
+            this.tbSDT.TabIndex = 48;
+            this.tbSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSDT_KeyPress);
+            // 
+            // txTen
+            // 
+            this.txTen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txTen.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txTen.Location = new System.Drawing.Point(400, 137);
+            this.txTen.Multiline = true;
+            this.txTen.Name = "txTen";
+            this.txTen.Size = new System.Drawing.Size(612, 38);
+            this.txTen.TabIndex = 47;
+            // 
             // FormNewHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1258, 777);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.dateTimePickerNKT);
-            this.Controls.Add(this.dateTimePickerNL);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tbSNG);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbDC);
             this.Controls.Add(this.tbSDT);
             this.Controls.Add(this.txTen);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dateTimePickerNKT);
+            this.Controls.Add(this.dateTimePickerNL);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -372,6 +329,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelLHD);
+            this.MinimumSize = new System.Drawing.Size(1276, 824);
             this.Name = "FormNewHD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNewHD";
@@ -395,15 +353,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private UI.UserControlBTN txTen;
-        private UI.UserControlBTN tbSDT;
-        private UI.UserControlBTN tbDC;
-        private UI.UserControlBTN tbEmail;
-        private UI.UserControlBTN tbSNG;
         private UI.ClassComboBox comboBox1;
         private UI.DatePicker dateTimePickerNL;
         private UI.DatePicker dateTimePickerNKT;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox tbSNG;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbDC;
+        private System.Windows.Forms.TextBox tbSDT;
+        private System.Windows.Forms.TextBox txTen;
     }
 }
