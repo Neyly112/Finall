@@ -206,7 +206,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if ((Convert.ToInt32(tbTienDien.Text) <= 0) || (Convert.ToInt32(tbTienNuoc.Text) <= 0))
+            if ((Convert.ToDouble(tbTienDien.Text) <= 0) || (Convert.ToDouble(tbTienNuoc.Text) <= 0))
             {
                 MessageBox.Show("Các số liệu phải lớn hơn 0.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

@@ -52,9 +52,9 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if ((Convert.ToInt32(tbPhiSinhHoat.Text.Trim()) <= 0) || (Convert.ToInt32(tbTienDien.Text.Trim()) <= 0)
-                || (Convert.ToInt32(tbTienNuoc.Text.Trim()) <= 0) || (Convert.ToInt32(tbTienXe15Tan.Text.Trim()) <= 0)
-                || (Convert.ToInt32(tbTienXeDap.Text.Trim()) <= 0) || (Convert.ToInt32(tbTienXeMay.Text.Trim()) <= 0))
+            if ((Convert.ToDouble(tbPhiSinhHoat.Text.Trim()) <= 0) || (Convert.ToDouble(tbTienDien.Text.Trim()) <= 0)
+                || (Convert.ToDouble(tbTienNuoc.Text.Trim()) <= 0) || (Convert.ToDouble(tbTienXe15Tan.Text.Trim()) <= 0)
+                || (Convert.ToDouble(tbTienXeDap.Text.Trim()) <= 0) || (Convert.ToDouble(tbTienXeMay.Text.Trim()) <= 0))
             {
                 MessageBox.Show("Các số liệu không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
