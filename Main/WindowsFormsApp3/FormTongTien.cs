@@ -207,7 +207,7 @@ namespace WindowsFormsApp3
             funcAddNuoc(so_m3, tongTienNuoc);
             funcAddTienXe(tongTienXe);
             this.Hide();
-            FormDSHDQL f = new FormDSHDQL(ma);
+            FormNhapTinhToan f = new FormNhapTinhToan(ma);
             f.ShowDialog();
         }
 
