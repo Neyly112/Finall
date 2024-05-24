@@ -149,7 +149,7 @@ namespace WindowsFormsApp3
             sqlCm.CommandText = "update Hop_dong set NgayKetThuc = '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "', SoNguoiO='" + tbSoNg.Text + "' where MaPhong = '" + tenPhong + "'";
             sqlCm.Connection = sql;
             
-            MessageBox.Show("kkk");
+           
             int kq = sqlCm.ExecuteNonQuery();
             if (kq > 0)
             {

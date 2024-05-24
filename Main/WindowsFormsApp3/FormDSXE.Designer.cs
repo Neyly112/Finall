@@ -101,7 +101,7 @@
             // 
             // xoa
             // 
-            this.xoa.HeaderText = "Xoa";
+            this.xoa.HeaderText = "ThaoTac";
             this.xoa.MinimumWidth = 6;
             this.xoa.Name = "xoa";
             this.xoa.ReadOnly = true;
