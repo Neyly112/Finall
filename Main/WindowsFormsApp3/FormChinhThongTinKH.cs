@@ -108,23 +108,17 @@ namespace WindowsFormsApp3
 
         private void FormChinhThongTinKH_Load(object sender, EventArgs e)
         {
-            tbDiaChi.Texts = diaChi;
-            tbEmail.Texts = email;
-            tbTen.Texts = ten;
-            tbSdt.Texts = sDT;
+            tbDiaChi.Text = diaChi;
+            tbEmail.Text = email;
+            tbTen.Text = ten;
+            tbSdt.Text = sDT;
             label1.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
             label4.BackColor = System.Drawing.Color.Transparent;
             label5.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -136,26 +130,26 @@ namespace WindowsFormsApp3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (tbSdt.Texts.Length != 10)
+            if (tbSdt.Text.Trim().Length != 10)
             {
-                MessageBox.Show("Số điện thoại không hợp lệ");
+                MessageBox.Show("Số điện thoại không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (isEmail(tbEmail.Texts) == false)
+            if (isEmail(tbEmail.Text.Trim()) == false)
             {
-                MessageBox.Show("Email không hợp lệ");
+                MessageBox.Show("Email không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
-            if ((tbEmail.Texts == "") || (tbDiaChi.Texts == "") || (tbSdt.Texts == "") || (tbTen.Texts == ""))
+            if ((tbEmail.Text.Trim() == "") || (tbDiaChi.Text.Trim() == "") || (tbSdt.Text.Trim() == "") || (tbTen.Text.Trim() == ""))
             {
-                MessageBox.Show("Vui lòng không để trống thông tin");
+                MessageBox.Show("Vui lòng không để trống thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string ten = tbTen.Texts;
-            string Sdt = tbSdt.Texts;
-            string email = tbEmail.Texts;
-            string diaChi = tbDiaChi.Texts;
+            string ten = tbTen.Text.Trim();
+            string Sdt = tbSdt.Text.Trim();
+            string email = tbEmail.Text.Trim();
+            string diaChi = tbDiaChi.Text.Trim();
 
             if (sql == null)
             {
@@ -176,7 +170,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             this.Hide();
             FormThongTinKH f = new FormThongTinKH(ma);
@@ -188,6 +182,27 @@ namespace WindowsFormsApp3
             this.Hide();
             FormThongTinKH f = new FormThongTinKH(ma);
             f.ShowDialog();
+        }
+
+        private void tbSdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDMKNT formDMKNT = new FormDMKNT(ma);
+            formDMKNT.ShowDialog();
         }
     }
 }

@@ -60,9 +60,19 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((tbMkCu.Texts == "") || (tbMkMoi.Texts == ""))
+            if ((tbMkCu.Texts == "") || (tbMkMoi.Texts == "") || (tbXacNhan.Texts == ""))
             {
-                MessageBox.Show("Vui lòng nhập thông tin");
+                MessageBox.Show("Vui lòng nhập thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if ((tbMkCu.Texts == tbMkMoi.Texts))
+            {
+                MessageBox.Show("Mật khẩu mới trùng mật khẩu cũ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if ((tbXacNhan.Texts != tbMkMoi.Texts))
+            {
+                MessageBox.Show("Sai mật khẩu xác nhận.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string matKhauCu = tbMkCu.Texts;
@@ -91,7 +101,7 @@ namespace WindowsFormsApp3
             sql.Close();
             if (mk != matKhauCu)
             {
-                MessageBox.Show("Sai mật khẩu cũ");
+                MessageBox.Show("Sai mật khẩu cũ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -108,8 +118,8 @@ namespace WindowsFormsApp3
             label1.BackColor = System.Drawing.Color.Transparent;
             label2.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
-            label8.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
         }
     }
 }

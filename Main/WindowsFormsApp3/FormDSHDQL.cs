@@ -29,6 +29,7 @@ namespace WindowsFormsApp3
             row = dataGridView1.Rows[e.RowIndex];
             string maHD = Convert.ToString(row.Cells["MaHoaDon"].Value);
             string maPhong = Convert.ToString(row.Cells["MaPhong"].Value);
+
             this.Hide();
             FormXacNhanHoaDon f = new FormXacNhanHoaDon(ma, maHD, maPhong);
             f.ShowDialog();
@@ -37,7 +38,6 @@ namespace WindowsFormsApp3
         private void FormDSHDQL_Load(object sender, EventArgs e)
         {
             label1.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
             dataGridView1.DataSource = getAllHopDong().Tables[0];
             DataSet getAllHopDong()
@@ -73,6 +73,16 @@ namespace WindowsFormsApp3
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+           
         }
     }
 }

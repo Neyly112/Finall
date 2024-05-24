@@ -36,7 +36,6 @@ namespace WindowsFormsApp3
         {
             showNT();
             label1.BackColor = System.Drawing.Color.Transparent;
-            label2.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
         }
         public void showNT()

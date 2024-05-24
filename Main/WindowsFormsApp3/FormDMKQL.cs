@@ -27,13 +27,24 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((tbMkCu.Text == "") || (tbMkMoi.Text == ""))
+            if ((tbMkCu.Texts == "") || (tbMkMoi.Texts == "") || (tbXacNhan.Texts == ""))
             {
-                MessageBox.Show("Vui lòng nhập thông tin");
+                MessageBox.Show("Vui lòng nhập thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string matKhauCu = tbMkCu.Text.Trim();
-            string mkMoi = tbMkMoi.Text.Trim();
+            if (tbMkCu.Texts.ToString() == tbMkMoi.Texts.ToString())
+            {
+                MessageBox.Show("Mật khẩu mới trùng mật khẩu cũ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (tbMkMoi.Texts != tbXacNhan.Texts)
+            {
+                MessageBox.Show("Sai mật khẩu xác nhận.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string matKhauCu = tbMkCu.Texts;
+            string mkMoi = tbMkMoi.Texts;
+            string mkXacNhan = tbXacNhan.Texts;
             if (sql == null)
             {
                 sql = new SqlConnection(strSql);
@@ -58,7 +69,7 @@ namespace WindowsFormsApp3
             sql.Close();
             if (mk != matKhauCu)
             {
-                MessageBox.Show("Sai mật khẩu cũ");
+                MessageBox.Show("Sai mật khẩu cũ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -76,8 +87,8 @@ namespace WindowsFormsApp3
             label1.BackColor = System.Drawing.Color.Transparent;
             label2.BackColor = System.Drawing.Color.Transparent;
             label3.BackColor = System.Drawing.Color.Transparent;
-            label8.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            label4.BackColor = System.Drawing.Color.Transparent;
         }
         private void upDateMK(string mkMoi)
         {

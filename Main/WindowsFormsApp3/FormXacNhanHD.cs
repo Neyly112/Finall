@@ -59,7 +59,6 @@ namespace WindowsFormsApp3
             label4.BackColor = System.Drawing.Color.Transparent;
             tbTenNguoiThue.BackColor = System.Drawing.Color.Transparent;
             tbSoNg.BackColor = System.Drawing.Color.Transparent;
-            label5.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
             
         }

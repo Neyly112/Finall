@@ -56,7 +56,7 @@ namespace WindowsFormsApp3
             {
                 bt3.Checked = false;
             }
-            else if (sender == bt3 && bt3.Checked)
+            else 
             {
                 bt1.Checked = false;
             }

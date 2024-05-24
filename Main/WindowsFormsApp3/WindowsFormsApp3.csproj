@@ -178,6 +178,12 @@
       <DependentUpon>checkCode.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassConnect.cs" />
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChinhSuaThongTinCH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,12 @@
     <Compile Include="FormHoTroKhachHang.Designer.cs">
       <DependentUpon>FormHoTroKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemPhong.Designer.cs">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongTinHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -499,6 +511,9 @@
     <EmbeddedResource Include="checkCode.resx">
       <DependentUpon>checkCode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChinhSuaThongTinCH.resx">
       <DependentUpon>FormChinhSuaThongTinCH.cs</DependentUpon>
     </EmbeddedResource>
@@ -585,6 +600,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoTroKhachHang.resx">
       <DependentUpon>FormHoTroKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemPhong.resx">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinHopDong.resx">
       <DependentUpon>FormThongTinHopDong.cs</DependentUpon>

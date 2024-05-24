@@ -28,18 +28,18 @@ namespace WindowsFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (tbPhiSinhHoat.Texts == "" || tbTienDien.Texts == "" ||
-               tbTienNuoc.Texts == "" || tbTienXeMay.Texts == "" ||
-               tbTienXeDap.Texts == "" || tbTienXe15Tan.Texts == "")
+            if (tbPhiSinhHoat.Text.Trim() == "" || tbTienDien.Text.Trim() == "" ||
+               tbTienNuoc.Text.Trim() == "" || tbTienXeMay.Text.Trim() == "" ||
+               tbTienXeDap.Text.Trim() == "" || tbTienXe15Tan.Text.Trim() == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if ((Convert.ToInt32(tbPhiSinhHoat.Texts) <= 0) || (Convert.ToInt32(tbTienDien.Texts) <= 0)
-                || (Convert.ToInt32(tbTienNuoc.Texts) <= 0) || (Convert.ToInt32(tbTienXe15Tan.Texts) <= 0)
-                || (Convert.ToInt32(tbTienXeDap.Texts) <= 0) || (Convert.ToInt32(tbTienXeMay.Texts) <= 0))
+            if ((Convert.ToDouble(tbPhiSinhHoat.Text.Trim()) <= 0) || (Convert.ToDouble(tbTienDien.Text.Trim()) <= 0)
+                || (Convert.ToDouble(tbTienNuoc.Text.Trim()) <= 0) || (Convert.ToDouble(tbTienXe15Tan.Text.Trim()) <= 0)
+                || (Convert.ToDouble(tbTienXeDap.Text.Trim()) <= 0) || (Convert.ToDouble(tbTienXeMay.Text.Trim()) <= 0))
             {
-                MessageBox.Show("Các số liệu không hợp lệ");
+                MessageBox.Show("Các số liệu không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -52,12 +52,12 @@ namespace WindowsFormsApp3
                 sql.Open();
             }
 
-            string tienNuoc = tbTienNuoc.Texts;
-            string tienDien = tbTienDien.Texts;
-            string phiSinhHoat = tbPhiSinhHoat.Texts;
-            string tienXeMay = tbTienXeMay.Texts;
-            string tienXeDap = tbTienXeDap.Texts;
-            string tienXeDuoi15Tan = tbTienXe15Tan.Texts;
+            string tienNuoc = tbTienNuoc.Text.Trim();
+            string tienDien = tbTienDien.Text.Trim();
+            string phiSinhHoat = tbPhiSinhHoat.Text.Trim();
+            string tienXeMay = tbTienXeMay.Text.Trim();
+            string tienXeDap = tbTienXeDap.Text.Trim();
+            string tienXeDuoi15Tan = tbTienXe15Tan.Text.Trim();
             SqlCommand sqlCm = new SqlCommand();
             sqlCm.CommandType = CommandType.Text;
             sqlCm.CommandText = "exec insertToBP '" + tienNuoc + "', '" + phiSinhHoat + "', '" +
@@ -93,8 +93,102 @@ namespace WindowsFormsApp3
             label5.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
             label7.BackColor = System.Drawing.Color.Transparent;
-            label8.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;
+        }
+
+        private void tbTienNuoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTienDien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbPhiSinhHoat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPhiSinhHoat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTienXeMay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTienXeDap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbTienXe15Tan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

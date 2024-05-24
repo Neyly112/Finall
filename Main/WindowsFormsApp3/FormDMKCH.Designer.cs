@@ -33,21 +33,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tbMkCu = new WindowsFormsApp3.UI.UserControlBTN();
             this.tbMkMoi = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbXacNhan = new WindowsFormsApp3.UI.UserControlBTN();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(412, 371);
+            this.button1.Location = new System.Drawing.Point(413, 403);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 45);
             this.button1.TabIndex = 13;
@@ -57,12 +59,13 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThoat.BackColor = System.Drawing.Color.Gold;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnThoat.Location = new System.Drawing.Point(206, 371);
+            this.btnThoat.Location = new System.Drawing.Point(207, 403);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(146, 45);
             this.btnThoat.TabIndex = 12;
@@ -72,9 +75,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(103, 267);
+            this.label3.Location = new System.Drawing.Point(49, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 37);
             this.label3.TabIndex = 11;
@@ -82,9 +86,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(103, 175);
+            this.label2.Location = new System.Drawing.Point(49, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 37);
             this.label2.TabIndex = 10;
@@ -92,6 +97,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(324, 69);
@@ -99,18 +105,6 @@
             this.label1.Size = new System.Drawing.Size(196, 37);
             this.label1.TabIndex = 9;
             this.label1.Text = "Đổi mật khẩu";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(14, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 46);
-            this.label8.TabIndex = 95;
-            this.label8.Text = "Amana";
             // 
             // pictureBox2
             // 
@@ -125,13 +119,14 @@
             // 
             // tbMkCu
             // 
+            this.tbMkCu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbMkCu.BackColor = System.Drawing.SystemColors.Window;
             this.tbMkCu.BorderColor = System.Drawing.Color.DarkKhaki;
             this.tbMkCu.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tbMkCu.BorderSize = 5;
             this.tbMkCu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMkCu.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbMkCu.Location = new System.Drawing.Point(354, 175);
+            this.tbMkCu.Location = new System.Drawing.Point(359, 144);
             this.tbMkCu.Margin = new System.Windows.Forms.Padding(4);
             this.tbMkCu.Multiline = false;
             this.tbMkCu.Name = "tbMkCu";
@@ -144,13 +139,14 @@
             // 
             // tbMkMoi
             // 
+            this.tbMkMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbMkMoi.BackColor = System.Drawing.SystemColors.Window;
             this.tbMkMoi.BorderColor = System.Drawing.Color.DarkKhaki;
             this.tbMkMoi.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tbMkMoi.BorderSize = 5;
             this.tbMkMoi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbMkMoi.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbMkMoi.Location = new System.Drawing.Point(354, 267);
+            this.tbMkMoi.Location = new System.Drawing.Point(359, 236);
             this.tbMkMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tbMkMoi.Multiline = false;
             this.tbMkMoi.Name = "tbMkMoi";
@@ -161,21 +157,54 @@
             this.tbMkMoi.Texts = "";
             this.tbMkMoi.UnderlinedStyle = true;
             // 
+            // tbXacNhan
+            // 
+            this.tbXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbXacNhan.BackColor = System.Drawing.SystemColors.Window;
+            this.tbXacNhan.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbXacNhan.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbXacNhan.BorderSize = 5;
+            this.tbXacNhan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbXacNhan.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbXacNhan.Location = new System.Drawing.Point(359, 323);
+            this.tbXacNhan.Margin = new System.Windows.Forms.Padding(4);
+            this.tbXacNhan.Multiline = false;
+            this.tbXacNhan.Name = "tbXacNhan";
+            this.tbXacNhan.Padding = new System.Windows.Forms.Padding(7);
+            this.tbXacNhan.PasswordChar = false;
+            this.tbXacNhan.Size = new System.Drawing.Size(349, 41);
+            this.tbXacNhan.TabIndex = 99;
+            this.tbXacNhan.Texts = "";
+            this.tbXacNhan.UnderlinedStyle = true;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(49, 327);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(270, 37);
+            this.label4.TabIndex = 98;
+            this.label4.Text = "Xác nhận mật khẩu";
+            // 
             // FormDMKCH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(807, 485);
+            this.Controls.Add(this.tbXacNhan);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tbMkMoi);
             this.Controls.Add(this.tbMkCu);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(825, 532);
             this.Name = "FormDMKCH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDMKQL";
@@ -192,9 +221,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UI.UserControlBTN tbMkCu;
         private UI.UserControlBTN tbMkMoi;
+        private UI.UserControlBTN tbXacNhan;
+        private System.Windows.Forms.Label label4;
     }
 }
