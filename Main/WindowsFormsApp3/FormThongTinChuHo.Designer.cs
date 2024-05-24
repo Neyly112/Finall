@@ -39,8 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbTen = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbMatKhau = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -176,28 +174,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Tên";
             // 
-            // lbMatKhau
-            // 
-            this.lbMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbMatKhau.AutoSize = true;
-            this.lbMatKhau.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbMatKhau.Location = new System.Drawing.Point(354, 387);
-            this.lbMatKhau.Name = "lbMatKhau";
-            this.lbMatKhau.Size = new System.Drawing.Size(97, 37);
-            this.lbMatKhau.TabIndex = 40;
-            this.lbMatKhau.Text = "label2";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(106, 387);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 37);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Mật khẩu";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -216,8 +192,6 @@
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(863, 559);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lbMatKhau);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lbDiaChi);
@@ -253,8 +227,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbMatKhau;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
