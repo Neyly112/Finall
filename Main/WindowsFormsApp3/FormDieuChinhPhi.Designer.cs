@@ -39,12 +39,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tbTienNuoc = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbTienDien = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbPhiSinhHoat = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbTienXeMay = new WindowsFormsApp3.UI.UserControlBTN();
-            this.tbTienXeDap = new WindowsFormsApp3.UI.UserControlBTN();
             this.tbTienXe15Tan = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienXeDap = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienXeMay = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbPhiSinhHoat = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienDien = new WindowsFormsApp3.UI.UserControlBTN();
+            this.tbTienNuoc = new WindowsFormsApp3.UI.UserControlBTN();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,7 +151,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 22.8F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Gold;
             this.label8.Location = new System.Drawing.Point(11, 96);
@@ -171,81 +171,24 @@
             this.pictureBox2.TabIndex = 90;
             this.pictureBox2.TabStop = false;
             // 
-            // tbTienNuoc
+            // tbTienXe15Tan
             // 
-            this.tbTienNuoc.BackColor = System.Drawing.SystemColors.Window;
-            this.tbTienNuoc.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbTienNuoc.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbTienNuoc.BorderSize = 5;
-            this.tbTienNuoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTienNuoc.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbTienNuoc.Location = new System.Drawing.Point(489, 110);
-            this.tbTienNuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTienNuoc.Multiline = false;
-            this.tbTienNuoc.Name = "tbTienNuoc";
-            this.tbTienNuoc.Padding = new System.Windows.Forms.Padding(7);
-            this.tbTienNuoc.PasswordChar = false;
-            this.tbTienNuoc.Size = new System.Drawing.Size(260, 41);
-            this.tbTienNuoc.TabIndex = 92;
-            this.tbTienNuoc.Texts = "";
-            this.tbTienNuoc.UnderlinedStyle = true;
-            // 
-            // tbTienDien
-            // 
-            this.tbTienDien.BackColor = System.Drawing.SystemColors.Window;
-            this.tbTienDien.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbTienDien.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbTienDien.BorderSize = 5;
-            this.tbTienDien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTienDien.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbTienDien.Location = new System.Drawing.Point(489, 163);
-            this.tbTienDien.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTienDien.Multiline = false;
-            this.tbTienDien.Name = "tbTienDien";
-            this.tbTienDien.Padding = new System.Windows.Forms.Padding(7);
-            this.tbTienDien.PasswordChar = false;
-            this.tbTienDien.Size = new System.Drawing.Size(260, 41);
-            this.tbTienDien.TabIndex = 93;
-            this.tbTienDien.Texts = "";
-            this.tbTienDien.UnderlinedStyle = true;
-            // 
-            // tbPhiSinhHoat
-            // 
-            this.tbPhiSinhHoat.BackColor = System.Drawing.SystemColors.Window;
-            this.tbPhiSinhHoat.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbPhiSinhHoat.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbPhiSinhHoat.BorderSize = 5;
-            this.tbPhiSinhHoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbPhiSinhHoat.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbPhiSinhHoat.Location = new System.Drawing.Point(489, 221);
-            this.tbPhiSinhHoat.Margin = new System.Windows.Forms.Padding(4);
-            this.tbPhiSinhHoat.Multiline = false;
-            this.tbPhiSinhHoat.Name = "tbPhiSinhHoat";
-            this.tbPhiSinhHoat.Padding = new System.Windows.Forms.Padding(7);
-            this.tbPhiSinhHoat.PasswordChar = false;
-            this.tbPhiSinhHoat.Size = new System.Drawing.Size(260, 41);
-            this.tbPhiSinhHoat.TabIndex = 94;
-            this.tbPhiSinhHoat.Texts = "";
-            this.tbPhiSinhHoat.UnderlinedStyle = true;
-            // 
-            // tbTienXeMay
-            // 
-            this.tbTienXeMay.BackColor = System.Drawing.SystemColors.Window;
-            this.tbTienXeMay.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbTienXeMay.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbTienXeMay.BorderSize = 5;
-            this.tbTienXeMay.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTienXeMay.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbTienXeMay.Location = new System.Drawing.Point(489, 278);
-            this.tbTienXeMay.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTienXeMay.Multiline = false;
-            this.tbTienXeMay.Name = "tbTienXeMay";
-            this.tbTienXeMay.Padding = new System.Windows.Forms.Padding(7);
-            this.tbTienXeMay.PasswordChar = false;
-            this.tbTienXeMay.Size = new System.Drawing.Size(260, 41);
-            this.tbTienXeMay.TabIndex = 95;
-            this.tbTienXeMay.Texts = "";
-            this.tbTienXeMay.UnderlinedStyle = true;
+            this.tbTienXe15Tan.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienXe15Tan.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienXe15Tan.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienXe15Tan.BorderSize = 5;
+            this.tbTienXe15Tan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienXe15Tan.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienXe15Tan.Location = new System.Drawing.Point(489, 399);
+            this.tbTienXe15Tan.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienXe15Tan.Multiline = false;
+            this.tbTienXe15Tan.Name = "tbTienXe15Tan";
+            this.tbTienXe15Tan.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienXe15Tan.PasswordChar = false;
+            this.tbTienXe15Tan.Size = new System.Drawing.Size(260, 41);
+            this.tbTienXe15Tan.TabIndex = 97;
+            this.tbTienXe15Tan.Texts = "";
+            this.tbTienXe15Tan.UnderlinedStyle = true;
             // 
             // tbTienXeDap
             // 
@@ -266,24 +209,81 @@
             this.tbTienXeDap.Texts = "";
             this.tbTienXeDap.UnderlinedStyle = true;
             // 
-            // tbTienXe15Tan
+            // tbTienXeMay
             // 
-            this.tbTienXe15Tan.BackColor = System.Drawing.SystemColors.Window;
-            this.tbTienXe15Tan.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.tbTienXe15Tan.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.tbTienXe15Tan.BorderSize = 5;
-            this.tbTienXe15Tan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTienXe15Tan.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbTienXe15Tan.Location = new System.Drawing.Point(489, 399);
-            this.tbTienXe15Tan.Margin = new System.Windows.Forms.Padding(4);
-            this.tbTienXe15Tan.Multiline = false;
-            this.tbTienXe15Tan.Name = "tbTienXe15Tan";
-            this.tbTienXe15Tan.Padding = new System.Windows.Forms.Padding(7);
-            this.tbTienXe15Tan.PasswordChar = false;
-            this.tbTienXe15Tan.Size = new System.Drawing.Size(260, 41);
-            this.tbTienXe15Tan.TabIndex = 97;
-            this.tbTienXe15Tan.Texts = "";
-            this.tbTienXe15Tan.UnderlinedStyle = true;
+            this.tbTienXeMay.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienXeMay.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienXeMay.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienXeMay.BorderSize = 5;
+            this.tbTienXeMay.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienXeMay.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienXeMay.Location = new System.Drawing.Point(489, 278);
+            this.tbTienXeMay.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienXeMay.Multiline = false;
+            this.tbTienXeMay.Name = "tbTienXeMay";
+            this.tbTienXeMay.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienXeMay.PasswordChar = false;
+            this.tbTienXeMay.Size = new System.Drawing.Size(260, 41);
+            this.tbTienXeMay.TabIndex = 95;
+            this.tbTienXeMay.Texts = "";
+            this.tbTienXeMay.UnderlinedStyle = true;
+            // 
+            // tbPhiSinhHoat
+            // 
+            this.tbPhiSinhHoat.BackColor = System.Drawing.SystemColors.Window;
+            this.tbPhiSinhHoat.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbPhiSinhHoat.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbPhiSinhHoat.BorderSize = 5;
+            this.tbPhiSinhHoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbPhiSinhHoat.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbPhiSinhHoat.Location = new System.Drawing.Point(489, 221);
+            this.tbPhiSinhHoat.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPhiSinhHoat.Multiline = false;
+            this.tbPhiSinhHoat.Name = "tbPhiSinhHoat";
+            this.tbPhiSinhHoat.Padding = new System.Windows.Forms.Padding(7);
+            this.tbPhiSinhHoat.PasswordChar = false;
+            this.tbPhiSinhHoat.Size = new System.Drawing.Size(260, 41);
+            this.tbPhiSinhHoat.TabIndex = 94;
+            this.tbPhiSinhHoat.Texts = "";
+            this.tbPhiSinhHoat.UnderlinedStyle = true;
+            // 
+            // tbTienDien
+            // 
+            this.tbTienDien.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienDien.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienDien.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienDien.BorderSize = 5;
+            this.tbTienDien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienDien.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienDien.Location = new System.Drawing.Point(489, 163);
+            this.tbTienDien.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienDien.Multiline = false;
+            this.tbTienDien.Name = "tbTienDien";
+            this.tbTienDien.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienDien.PasswordChar = false;
+            this.tbTienDien.Size = new System.Drawing.Size(260, 41);
+            this.tbTienDien.TabIndex = 93;
+            this.tbTienDien.Texts = "";
+            this.tbTienDien.UnderlinedStyle = true;
+            // 
+            // tbTienNuoc
+            // 
+            this.tbTienNuoc.BackColor = System.Drawing.SystemColors.Window;
+            this.tbTienNuoc.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.tbTienNuoc.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbTienNuoc.BorderSize = 5;
+            this.tbTienNuoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTienNuoc.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbTienNuoc.Location = new System.Drawing.Point(489, 110);
+            this.tbTienNuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienNuoc.Multiline = false;
+            this.tbTienNuoc.Name = "tbTienNuoc";
+            this.tbTienNuoc.Padding = new System.Windows.Forms.Padding(7);
+            this.tbTienNuoc.PasswordChar = false;
+            this.tbTienNuoc.Size = new System.Drawing.Size(260, 41);
+            this.tbTienNuoc.TabIndex = 92;
+            this.tbTienNuoc.Texts = "";
+            this.tbTienNuoc.UnderlinedStyle = true;
             // 
             // FormDieuChinhPhi
             // 

@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp3
 {
@@ -24,6 +25,17 @@ namespace WindowsFormsApp3
         public FormDKX(string ma)
         {
             InitializeComponent();
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.bt1.BackColor = System.Drawing.Color.Transparent;
+            this.bt3.BackColor = System.Drawing.Color.Transparent;
+
+
+
+
             this.ma = ma;
             strSql = c.SqlConect();
         }
@@ -64,15 +76,39 @@ namespace WindowsFormsApp3
             t.ShowDialog();
         }
 
-        public static bool check_bien_so(string plate)
+        public Boolean check_bien_so(string plate)
         {
-            string bikePlatePattern = @"^\d{5}$";
-
-            return Regex.IsMatch(plate, bikePlatePattern);
+            SqlConnection con = new SqlConnection(c.SqlConect());
+            try
+            {
+                con.Open();
+                string bsx = plate; 
+                String sql = "SELECT 1 FROM Dang_ki_xe WHERE bien_so = @BienSo";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@BienSo", plate);
+                SqlDataReader rdr = cmd.ExecuteReader();
+                if (!rdr.Read())
+                {
+                    string pattern = @"^\d{4}$|^\d{5}$";
+                    Regex regex = new Regex(pattern);
+                    return regex.IsMatch(plate);
+                }
+                else 
+                {
+                    return false;
+                }
+                con.Close();
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show("Lỗi kết nối database.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+           
             if (isButton1Clicked)
             {
 
@@ -109,6 +145,9 @@ namespace WindowsFormsApp3
                                     if (rowsAffected > 0)
                                     {
                                         MessageBox.Show("Dữ liệu đã được lưu thành công!", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Hide();
+                                        trangchu2 t = new trangchu2(ma);
+                                        t.ShowDialog();
                                     }
                                     else
                                     {
@@ -124,13 +163,12 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        MessageBox.Show("Biển số xe máy không hợp lệ!", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Biển số xe máy không hợp lệ hoặc biển số xe đã tồn tại.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             else if (isButton3Clicked)
             {
-
                 string loai_xe = bt3.Text;
                 DateTime now = DateTime.Now;
                 string thoi_gian = now.ToString("yyyy-MM-dd");
@@ -178,7 +216,7 @@ namespace WindowsFormsApp3
                     }
                     else
                     {
-                        MessageBox.Show("Biển số xe dưới 1.5 tấn không hợp lệ!", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Biển số xe dưới 1.5 tấn không hợp lệ hoặc biển số xe đã tồn tại.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
@@ -208,6 +246,18 @@ namespace WindowsFormsApp3
         }
 
         private void label4_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            trangchu2 t = new trangchu2(ma);
+            t.ShowDialog();
+        }
+
+        private void bienSoXe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             trangchu2 t = new trangchu2(ma);

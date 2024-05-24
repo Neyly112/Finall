@@ -87,8 +87,9 @@ namespace WindowsFormsApp3
 
         private void label4_Click(object sender, EventArgs e)
         {
-            this.Close();
-            CloseAllForms();
+            Form1 form = new Form1();
+            this.Hide();
+            form.ShowDialog();
         }
 
         

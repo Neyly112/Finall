@@ -53,3 +53,14 @@ E:\GITHUB_AN\Finall\Main\BLL1\obj\Debug\BLL1.csproj.CoreCompileInputs.cache
 E:\GITHUB_AN\Finall\Main\BLL1\obj\Debug\BLL1.csproj.CopyComplete
 E:\GITHUB_AN\Finall\Main\BLL1\obj\Debug\BLL1.dll
 E:\GITHUB_AN\Finall\Main\BLL1\obj\Debug\BLL1.pdb
+E:\GITHUB_AN\Finall2\Main\BLL1\bin\Debug\BLL1.dll
+E:\GITHUB_AN\Finall2\Main\BLL1\bin\Debug\BLL1.pdb
+E:\GITHUB_AN\Finall2\Main\BLL1\bin\Debug\DAO1.dll
+E:\GITHUB_AN\Finall2\Main\BLL1\bin\Debug\DTO1.dll
+E:\GITHUB_AN\Finall2\Main\BLL1\bin\Debug\DAO1.pdb
+E:\GITHUB_AN\Finall2\Main\BLL1\bin\Debug\DTO1.pdb
+E:\GITHUB_AN\Finall2\Main\BLL1\obj\Debug\BLL1.csproj.AssemblyReference.cache
+E:\GITHUB_AN\Finall2\Main\BLL1\obj\Debug\BLL1.csproj.CoreCompileInputs.cache
+E:\GITHUB_AN\Finall2\Main\BLL1\obj\Debug\BLL1.csproj.CopyComplete
+E:\GITHUB_AN\Finall2\Main\BLL1\obj\Debug\BLL1.dll
+E:\GITHUB_AN\Finall2\Main\BLL1\obj\Debug\BLL1.pdb
