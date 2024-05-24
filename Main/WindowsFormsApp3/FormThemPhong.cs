@@ -49,6 +49,12 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Mã phòng đã tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (Convert.ToDouble(textBox3.Text.Trim()) <= 0)
+            {
+                MessageBox.Show("Giá phòng không phù hợp.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } 
+
             if (sql == null)
             {
                 sql = new SqlConnection(c.SqlConect());

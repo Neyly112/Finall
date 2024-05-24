@@ -64,8 +64,7 @@ namespace WindowsFormsApp3
                 lbTen.Text = ten;
                 lbDiaChi.Text = diaChi;
                 lbEmail.Text = email;
-                string mk = new string('*', matKhau.Length);
-                lbMatKhau.Text = mk;
+                
                 lbSdt.Text = sDT;
             }
             reader.Close();
@@ -74,10 +73,8 @@ namespace WindowsFormsApp3
             label4.BackColor = System.Drawing.Color.Transparent;
             label5.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
-            label7.BackColor = System.Drawing.Color.Transparent;
             lbDiaChi.BackColor = System.Drawing.Color.Transparent;
             lbEmail.BackColor = System.Drawing.Color.Transparent;
-            lbMatKhau.BackColor = System.Drawing.Color.Transparent;
             lbSdt.BackColor = System.Drawing.Color.Transparent;
             lbTen.BackColor = System.Drawing.Color.Transparent;
             pictureBox2.BackColor = System.Drawing.Color.Transparent;

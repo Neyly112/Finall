@@ -140,9 +140,7 @@ namespace WindowsFormsApp3
             if (kq > 0)
             {
                 MessageBox.Show("Đã lưu");
-                this.Hide();
-                trangchu f = new trangchu(ma);
-                f.ShowDialog();
+                
             }
             else
             {

@@ -116,7 +116,7 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Xóa";
+            this.Column1.HeaderText = "Xoa";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
