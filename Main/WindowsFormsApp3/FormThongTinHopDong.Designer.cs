@@ -173,6 +173,7 @@
             // tbSoNg
             // 
             this.tbSoNg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbSoNg.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.tbSoNg.Location = new System.Drawing.Point(472, 248);
             this.tbSoNg.Multiline = true;
             this.tbSoNg.Name = "tbSoNg";
@@ -184,6 +185,7 @@
             // tbTenNguoiThue
             // 
             this.tbTenNguoiThue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbTenNguoiThue.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbTenNguoiThue.Location = new System.Drawing.Point(472, 184);
             this.tbTenNguoiThue.Multiline = true;
             this.tbTenNguoiThue.Name = "tbTenNguoiThue";

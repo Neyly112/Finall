@@ -183,7 +183,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Error: " + ex.Message);
             }
             this.Hide();
-            trangchu f = new trangchu(ma);
+            FormDanhSachHopDong f = new FormDanhSachHopDong(ma);
             f.ShowDialog();
         }
         private void funcAddKH(string emailKH, string dc, string sdt, string TenKh)

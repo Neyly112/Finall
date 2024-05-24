@@ -40,6 +40,7 @@
             this.tbDiaChi = new System.Windows.Forms.TextBox();
             this.tbTen = new System.Windows.Forms.TextBox();
             this.tbSdt = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Location = new System.Drawing.Point(549, 465);
+            this.button2.Location = new System.Drawing.Point(397, 465);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 50);
             this.button2.TabIndex = 78;
@@ -78,7 +79,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(279, 465);
+            this.button1.Location = new System.Drawing.Point(163, 465);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 50);
             this.button1.TabIndex = 77;
@@ -182,12 +183,29 @@
             this.tbSdt.TabIndex = 85;
             this.tbSdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSdt_KeyPress);
             // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.Gold;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button3.Location = new System.Drawing.Point(616, 465);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(226, 50);
+            this.button3.TabIndex = 89;
+            this.button3.Text = "Đổi mật khẩu";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormChinhSuaThongTinQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(947, 558);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbDiaChi);
             this.Controls.Add(this.tbTen);
@@ -224,5 +242,6 @@
         private System.Windows.Forms.TextBox tbDiaChi;
         private System.Windows.Forms.TextBox tbTen;
         private System.Windows.Forms.TextBox tbSdt;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -153,6 +153,7 @@ namespace WindowsFormsApp3
             int kq = sqlCm.ExecuteNonQuery();
             if (kq > 0)
             {
+                funcDoiTenNguoiThue(tenPhong);
                 MessageBox.Show("Sửa thông tin thành công");
             }
             else
@@ -160,7 +161,10 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Lỗi");
             }
             sql.Close();
-            funcDoiTenNguoiThue(tenPhong);
+            this.Hide();
+            FormDanhSachHopDong f = new FormDanhSachHopDong(ma);
+            f.ShowDialog();
+
         }
 
         private void deleteNT()

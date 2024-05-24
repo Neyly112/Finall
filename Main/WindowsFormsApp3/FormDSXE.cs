@@ -56,16 +56,6 @@ namespace WindowsFormsApp3
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
             DataGridViewRow row = new DataGridViewRow();
             row = dataGridView1.Rows[e.RowIndex];
             string maNT = Convert.ToString(row.Cells["MaNguoiThue"].Value);
@@ -98,6 +88,16 @@ namespace WindowsFormsApp3
                 FormDSXE f = new FormDSXE(ma);
                 f.ShowDialog();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
